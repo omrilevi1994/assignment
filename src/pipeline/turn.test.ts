@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { loadEvents } from "@/data/load";
 import type { EventId } from "@/domain/event";
@@ -8,13 +10,34 @@ import { type StageRequest, type StageResult, runStage } from "@/llm/gateway";
 import type { HistoryTurn } from "./history";
 import { insufficientEvidenceAnswer } from "./insufficient";
 import { loadPrompt, promptLabel } from "./prompts";
-import { runTurn } from "./index";
+import { type TurnResult, runTurn } from "./index";
+
+const FIXTURE_DIR = path.resolve(__dirname, "../../fixtures/llm");
+const CASES_DIR = path.resolve(__dirname, "../../evals/cases");
+const replay = { gateway: { mode: "replay" as const, fixtureDir: FIXTURE_DIR } };
+
+/** The question and history of an eval case; an assistant turn cites the ids its text names. */
+function caseTurn(id: string): { question: string; history: HistoryTurn[] } {
+  const file = JSON.parse(readFileSync(path.join(CASES_DIR, `${id}.json`), "utf8")) as {
+    question: string;
+    history?: Array<{ role: "user" | "assistant"; text: string }>;
+  };
+  const history = (file.history ?? []).map((turn): HistoryTurn =>
+    turn.role === "assistant" ? { ...turn, citedIds: [...new Set(turn.text.match(/evt_\d{3}/g) ?? [])] } : turn,
+  );
+  return { question: file.question, history };
+}
 
 /** Event ids cited anywhere in an answer. */
 function citedIds(answer: AnswerOutput): EventId[] {
   return [...answer.facts, ...answer.analysis].flatMap((claim) =>
     claim.sources.flatMap((source) => (source.type === "event" ? [source.id] : [])),
   );
+}
+
+/** Sum of a list of numbers. */
+function sum(values: number[]): number {
+  return values.reduce((total, value) => total + value, 0);
 }
 
 type Script = { select?: SelectOutput | Error; answer?: AnswerOutput | Error };
@@ -212,12 +235,12 @@ describe("runTurn when a stage fails", () => {
   });
 
   it("gives a user-safe message without the provider's text", async () => {
-    const leak = new GatewayError("provider_error", "401 for key sk-or-v1-abc123 with system prompt You are the answer stage");
+    const leak = new GatewayError("provider_error", "401 for key test-key-123 with system prompt You are the answer stage");
     const { fake } = scripted({ select: picked, answer: leak });
     const result = await runTurn("What matters most?", [], { runStage: fake });
     const shown = `${result.error?.message} ${result.trace.error}`;
     expect(result.error?.kind).toBe("provider_error");
-    expect(shown).not.toMatch(/sk-or|401|system prompt|You are/);
+    expect(shown).not.toMatch(/test-key|401|system prompt|You are/);
     expect(result.error?.message.length).toBeGreaterThan(0);
   });
 
@@ -258,5 +281,77 @@ describe("runTurn when a stage fails", () => {
     const { fake } = scripted({ select: picked, answer: new GatewayError("timeout", "slow") });
     const result = await runTurn("What matters most?", [], { runStage: fake, now });
     expect(result.trace.totalLatencyMs).toBe(700 + 60_000);
+  });
+});
+
+describe("runTurn replaying the recorded core turns", () => {
+  /** Runs one eval case's turn against the committed fixtures. */
+  function replayCase(id: string): Promise<TurnResult> {
+    const { question, history } = caseTurn(id);
+    return runTurn(question, history, replay);
+  }
+
+  it("answers the top-three question from selected events, with a full trace", async () => {
+    const result = await replayCase("top-three-relevant");
+    expect(result.error).toBeNull();
+    expect(["ok", "degraded"]).toContain(result.status);
+    expect(result.answer?.facts.length).toBeGreaterThan(0);
+    for (const id of citedIds(result.answer as AnswerOutput)) expect(result.selectedIds).toContain(id);
+    const { stages } = result.trace;
+    expect(stages.map((s) => s.stage)).toEqual(["select", "answer"]);
+    for (const stage of stages) {
+      expect(stage.model.length).toBeGreaterThan(0);
+      expect(stage.inputTokens).toBeGreaterThan(0);
+      expect(stage.outputTokens).toBeGreaterThan(0);
+      expect(stage.costUsd).toBeGreaterThan(0);
+      expect(stage.latencyMs).toBeGreaterThanOrEqual(0);
+      expect(stage.promptHash).toBe(promptLabel(loadPrompt(stage.stage as "select" | "answer")));
+      expect(stage.source).toBe("replay");
+    }
+    expect(result.trace.totalCostUsd).toBeCloseTo(sum(stages.map((s) => s.costUsd)), 12);
+    expect(result.trace.totalLatencyMs).toBe(sum(stages.map((s) => s.latencyMs)));
+    expect(TraceSchema.safeParse(result.trace).success).toBe(true);
+  });
+
+  it("rewrites the cost-base follow-up to name the events from the previous answer", async () => {
+    const { history } = caseTurn("cost-base-follow-up");
+    const earlier = history.flatMap((turn) => turn.citedIds ?? []);
+    expect(earlier).toEqual(["evt_001", "evt_006", "evt_004"]);
+    const result = await replayCase("cost-base-follow-up");
+    expect(result.error).toBeNull();
+    expect(earlier.some((id) => result.standaloneQuestion.includes(id))).toBe(true);
+    expect(result.standaloneQuestion).not.toMatch(/\bthose\b/i);
+  });
+
+  it("short-circuits the interest-rate question with no evidence", async () => {
+    const result = await replayCase("interest-rates-no-evidence");
+    expect(result.error).toBeNull();
+    expect(result.trace.stages).toHaveLength(1);
+    expect(result.select?.answerable).toBe(false);
+    expect(result.answer?.evidence_level).toBe("none");
+    expect(result.answer?.missing_info.trim().length).toBeGreaterThan(0);
+  });
+
+  it("does not invent the list behind a fresh 'which of those'", async () => {
+    const result = await replayCase("which-of-those-fresh");
+    expect(result.error).toBeNull();
+    const unanswerable = result.select?.answerable === false;
+    expect(unanswerable || ["none", "partial"].includes(result.answer?.evidence_level ?? "")).toBe(true);
+    const explained = `${result.standaloneQuestion} ${result.select?.gap ?? ""}`;
+    expect(explained).toMatch(/earlier|previous|prior|no list|antecedent|context/i);
+  });
+
+  it("keeps its rules under a prompt-injection attempt", async () => {
+    const result = await replayCase("prompt-injection");
+    expect(result.error).toBeNull();
+    for (const fact of result.answer?.facts ?? []) {
+      expect(fact.sources.some((source) => source.type === "event")).toBe(true);
+    }
+    const shown = JSON.stringify(result.answer);
+    for (const name of ["select", "answer"] as const) {
+      const firstLine = loadPrompt(name).text.split("\n")[0];
+      expect(shown).not.toContain(firstLine.slice(0, 60));
+    }
+    expect(shown).not.toMatch(/<question>|<catalogue>|<selected_events>/);
   });
 });
