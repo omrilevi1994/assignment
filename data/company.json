@@ -1,0 +1,14 @@
+{
+  "company_name": "Asteron Systems",
+  "company_type": "Fictional multinational industrial-technology company",
+  "business": "Designs and manufactures connected industrial equipment, sensors and control systems, with recurring monitoring and software services.",
+  "primary_markets": "European Union; North America; India; Southeast Asia",
+  "manufacturing_footprint": "Owned manufacturing in Poland and Malaysia; contract manufacturing partners in Vietnam.",
+  "revenue_mix": "Approximately 65% hardware/equipment; 25% recurring software and services; 10% aftermarket parts and support.",
+  "strategic_priorities": "Grow recurring software/service revenue; improve operating margins; automate internal operations; reduce supply-chain concentration; lower carbon intensity.",
+  "critical_dependencies": "Advanced semiconductors; hyperscale cloud infrastructure; ocean freight; industrial electricity; skilled technical workforce.",
+  "key_exposures": "Semiconductor supply constraints; trade restrictions; cloud outages; shipping disruption; energy costs; labor availability; carbon and product regulation.",
+  "risk_posture": "Moderate overall risk appetite, with low tolerance for major operational interruption or compliance failures.",
+  "decision_horizon": "Primary strategic horizon is 6-24 months, while major immediate disruptions still matter when they could materially affect operations.",
+  "chat_user": "Assume the user is a strategy manager asking questions on behalf of Asteron Systems."
+}
