@@ -23,20 +23,20 @@ module.exports = {
       comment: "Domain logic knows nothing about the app, the gateway, the database or any framework.",
       severity: "error",
       from: { path: "^src/domain" },
-      to: { path: "^src/(app|components|llm|pipeline|db|data)|^node_modules/(next|react|ai|drizzle-orm)/" },
+      to: { path: "^src/(app|components|llm|pipeline|db|data)|(^|/)node_modules/(next|react|ai|drizzle-orm)/" },
     },
     {
       name: "pipeline-has-no-ui-or-db",
       severity: "error",
       from: { path: "^src/pipeline" },
-      to: { path: "^src/(app|components|db)|^node_modules/(next|react)/" },
+      to: { path: "^src/(app|components|db)|(^|/)node_modules/(next|react)/" },
     },
     {
       name: "only-gateway-talks-to-models",
       comment: "The AI SDK and provider packages are imported only by the LLM gateway.",
       severity: "error",
       from: { pathNot: "^src/llm" },
-      to: { path: "^node_modules/(ai|@openrouter|@ai-sdk)/" },
+      to: { path: "(^|/)node_modules/(ai|@openrouter|@ai-sdk)/" },
     },
     {
       name: "ui-does-not-touch-db-or-models",
