@@ -1,6 +1,13 @@
 import { describe, expect, it } from "vitest";
+import { COMPANY_FIELDS, type CompanyProfile } from "@/domain/company";
 import type { Event } from "@/domain/event";
-import { SELECT_CONTEXT_CHAR_BUDGET, renderCompact, renderFull, renderFullList } from "@/domain/render";
+import {
+  SELECT_CONTEXT_CHAR_BUDGET,
+  renderCompact,
+  renderCompanyProfile,
+  renderFull,
+  renderFullList,
+} from "@/domain/render";
 
 const outage: Event = {
   event_id: "evt_001",
@@ -115,5 +122,26 @@ describe("renderFullList", () => {
 
   it("returns an empty string for an empty array", () => {
     expect(renderFullList([])).toBe("");
+  });
+});
+
+describe("renderCompanyProfile", () => {
+  const profile = Object.fromEntries(COMPANY_FIELDS.map((field) => [field, `value of ${field}`])) as CompanyProfile;
+
+  it("renders one `field_name: value` line per profile field, in workbook order", () => {
+    expect(renderCompanyProfile(profile).split("\n")).toEqual(
+      COMPANY_FIELDS.map((field) => `${field}: value of ${field}`),
+    );
+  });
+
+  it("starts with the company name and ends with the chat user, without a trailing newline", () => {
+    const rendered = renderCompanyProfile({ ...profile, company_name: "Asteron Systems" });
+    expect(rendered.startsWith("company_name: Asteron Systems\n")).toBe(true);
+    expect(rendered.endsWith("chat_user: value of chat_user")).toBe(true);
+  });
+
+  it("ignores keys that are not profile fields", () => {
+    const extra = { ...profile, note: "not a field" } as CompanyProfile;
+    expect(renderCompanyProfile(extra)).not.toContain("not a field");
   });
 });

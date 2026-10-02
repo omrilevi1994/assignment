@@ -1,3 +1,4 @@
+import { COMPANY_FIELDS, type CompanyProfile } from "@/domain/company";
 import type { Event } from "@/domain/event";
 
 /**
@@ -30,4 +31,12 @@ export function renderFull(event: Event): string {
 /** Renders several events in full, separated by a blank line. */
 export function renderFullList(events: Event[]): string {
   return events.map(renderFull).join("\n\n");
+}
+
+/**
+ * Renders the company profile as one `field_name: value` line per profile
+ * field, in workbook order, so a stage can cite a field by the name it sees.
+ */
+export function renderCompanyProfile(profile: CompanyProfile): string {
+  return COMPANY_FIELDS.map((field) => `${field}: ${profile[field]}`).join("\n");
 }
