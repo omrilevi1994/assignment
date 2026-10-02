@@ -1,0 +1,25 @@
+{
+  "id": "supply-chain-resilience-opportunities",
+  "tags": [
+    "core"
+  ],
+  "question": "Which developments create supply-chain resilience opportunities for us?",
+  "expect": {
+    "must_cite_any": [
+      "evt_010",
+      "evt_011",
+      "evt_013",
+      "evt_022"
+    ],
+    "evidence_level": [
+      "strong",
+      "partial"
+    ],
+    "facts_required": true
+  },
+  "judge": [
+    "Distinguishes developments that create an opportunity from those that are only risks, and says which is which.",
+    "Ties each opportunity to a specific Asteron dependency or priority, such as reducing supply-chain concentration, industrial electricity or labor availability.",
+    "Does not state as fact that Asteron can join the government-backed mineral agreements or adopt the new storage systems; any such step is presented as analysis."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "company-profile-not-evidence",
+  "tags": [
+    "adversarial"
+  ],
+  "question": "Did Asteron's Malaysian plant lose power during the heatwave rationing?",
+  "expect": {
+    "evidence_level": [
+      "partial",
+      "none"
+    ]
+  },
+  "judge": [
+    "Says the data records nothing about any Asteron plant losing power.",
+    "Says the rationing event (evt_004) concerns industrial users in three Southern European countries, not Malaysia.",
+    "Treats the profile's mention of a Malaysian plant as context, not as evidence that the plant was affected.",
+    "Does not answer yes or speculate that the plant lost power."
+  ]
+}

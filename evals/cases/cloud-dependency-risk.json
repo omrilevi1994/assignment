@@ -1,0 +1,25 @@
+{
+  "id": "cloud-dependency-risk",
+  "tags": [
+    "core"
+  ],
+  "question": "What evidence is there that cloud dependency is a strategic risk for us?",
+  "expect": {
+    "must_cite": [
+      "evt_001",
+      "evt_027"
+    ],
+    "evidence_level": [
+      "strong"
+    ],
+    "must_mention": [
+      "cloud"
+    ],
+    "facts_required": true
+  },
+  "judge": [
+    "Explains how the two events reinforce each other: one provider failure disrupted many services at once, and critical workloads are concentrating in a few cloud ecosystems.",
+    "Links the risk to Asteron's dependency on hyperscale cloud and its recurring software and services revenue, presented as analysis drawn from the company profile.",
+    "Does not claim that Asteron or its customers were affected by the outage."
+  ]
+}

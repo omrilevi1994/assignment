@@ -1,0 +1,40 @@
+{
+  "id": "cost-base-follow-up",
+  "tags": [
+    "core",
+    "follow-up"
+  ],
+  "question": "Which of those could affect our cost base within 12 months?",
+  "history": [
+    {
+      "role": "user",
+      "text": "What are the three developments most relevant to Asteron right now?"
+    },
+    {
+      "role": "assistant",
+      "text": "1. evt_001: a six-hour regional outage at a major cloud provider matters because hyperscale cloud is a critical dependency for our recurring software and services. 2. evt_006: new export licensing for two advanced semiconductor chemicals matters because advanced semiconductors are a critical dependency and trade restrictions are a key exposure. 3. evt_004: temporary industrial power rationing in three Southern European countries during a heatwave matters because industrial electricity and energy costs are a key exposure."
+    }
+  ],
+  "expect": {
+    "must_cite_any": [
+      "evt_001",
+      "evt_004",
+      "evt_006"
+    ],
+    "must_not_cite": [
+      "evt_012",
+      "evt_015"
+    ],
+    "evidence_level": [
+      "strong",
+      "partial"
+    ],
+    "facts_required": true
+  },
+  "judge": [
+    "The rewritten standalone question names evt_001, evt_006 and evt_004 instead of saying 'those'.",
+    "Discusses only those three events, or says clearly why it brings in another one.",
+    "For each event it judges relevant, explains the cost mechanism, for example cloud or failover spend, chip prices and supplier switching, or electricity prices and lost output.",
+    "Presents the 12-month timing and any cost impact on Asteron as analysis, since no event states a timeline or a cost for Asteron."
+  ]
+}

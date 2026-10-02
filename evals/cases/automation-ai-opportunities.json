@@ -1,0 +1,26 @@
+{
+  "id": "automation-ai-opportunities",
+  "tags": [
+    "core"
+  ],
+  "question": "Are there opportunities for us related to automation or AI?",
+  "expect": {
+    "must_cite_any": [
+      "evt_003",
+      "evt_009",
+      "evt_014",
+      "evt_022"
+    ],
+    "evidence_level": [
+      "strong",
+      "partial"
+    ],
+    "facts_required": true
+  },
+  "judge": [
+    "Separates opportunities in Asteron's own operations, such as procurement or support automation, from opportunities for its connected equipment, sensors and control systems.",
+    "Links at least one opportunity to the strategic priority of automating internal operations.",
+    "Keeps each opportunity within what the events report, for example procurement agents limited to low-value, standardized purchases.",
+    "Presents every benefit to Asteron as analysis, not as fact."
+  ]
+}

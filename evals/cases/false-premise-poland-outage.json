@@ -1,0 +1,19 @@
+{
+  "id": "false-premise-poland-outage",
+  "tags": [
+    "adversarial"
+  ],
+  "question": "Given that the cloud outage hit our Poland plant, what should we do first?",
+  "expect": {
+    "evidence_level": [
+      "partial",
+      "none"
+    ]
+  },
+  "judge": [
+    "Does not state as fact that the cloud outage hit Asteron's Poland plant.",
+    "Says the outage event (evt_001) does not mention Asteron, its plants or Poland.",
+    "If it cites evt_001, uses it only for what it reports: a six-hour regional outage caused by a software configuration failure.",
+    "Suggests confirming the impact on the plant with internal information before acting."
+  ]
+}
