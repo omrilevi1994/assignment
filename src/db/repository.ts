@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { asc, desc, eq, max } from "drizzle-orm";
+import { and, asc, desc, eq, lt, max } from "drizzle-orm";
 import type { Trace } from "@/domain/trace";
 import { getDb, type Database } from "./client";
 import { conversations, traces, turns, type ConversationRow, type TraceRow, type TurnRow } from "./schema";
@@ -60,12 +60,15 @@ export async function appendTurn(
   });
 }
 
-/** The last `n` turns of a conversation, oldest first, ready to be replayed as context. */
-export async function loadHistory(conversationId: string, n: number, db: Database = getDb()): Promise<TurnRow[]> {
+/** The last `n` turns, optionally before one position, oldest first for conversation context. */
+export async function loadHistory(
+  conversationId: string, n: number, db: Database = getDb(), beforePosition?: number,
+): Promise<TurnRow[]> {
   const latest = await db
     .select()
     .from(turns)
-    .where(eq(turns.conversationId, conversationId))
+    .where(and(eq(turns.conversationId, conversationId),
+      beforePosition === undefined ? undefined : lt(turns.position, beforePosition)))
     .orderBy(desc(turns.position))
     .limit(n);
   return latest.reverse();
