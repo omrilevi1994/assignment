@@ -11,9 +11,11 @@ Requirements: pnpm 10 and Docker. pnpm downloads the pinned Node 24 on first use
 ```bash
 pnpm install
 cp .env.example .env.local   # fill in OPENROUTER_API_KEY
-pnpm dev:up                  # starts Postgres in Docker, then the app on http://localhost:3000
+pnpm dev:up                  # prepares Postgres, then starts the app on http://localhost:3000
 pnpm dev:down                # stops the database
 ```
+
+`pnpm db:up` authenticates against `DATABASE_URL` (loaded from `.env.local` when present), reusing an available database across worktrees. If the default local database is unavailable, it starts Docker Compose and checks again. An unavailable custom database fails without starting Docker. Run `pnpm dev:down` from the checkout that owns the Compose service.
 
 ## Verify
 

@@ -9,7 +9,7 @@
     "dev": "next dev",
     "dev:up": "pnpm db:up && pnpm db:migrate && next dev",
     "dev:down": "docker compose down",
-    "db:up": "docker compose up -d --wait db",
+    "db:up": "tsx scripts/db-up.ts",
     "db:migrate": "tsx scripts/db-migrate.ts",
     "db:studio": "drizzle-kit studio",
     "data:convert": "tsx scripts/data-convert.ts",
