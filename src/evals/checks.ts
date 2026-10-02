@@ -102,6 +102,15 @@ export function checkFactsRequired(answer: AnswerOutput): CheckResult {
   return { name: "facts_required", pass: false, detail: "Stated no facts, but facts are required." };
 }
 
+/** Checks factual citation coverage without requiring a refusal to invent factual claims. */
+export function checkFactsHaveEventSources(answer: AnswerOutput): CheckResult {
+  const missing = answer.facts.filter((fact) => !fact.sources.some((source) => source.type === "event"));
+  const detail = missing.length > 0
+    ? `Facts without event citations: ${missing.map((fact) => fact.claim).join("; ")}`
+    : "Every stated fact carries an event citation.";
+  return { name: "facts_have_event_sources", pass: missing.length === 0, detail };
+}
+
 type Runner = (expect: Expectations, answer: AnswerOutput) => CheckResult;
 
 /** Every check in report order, next to the expectation that switches it on. */
@@ -113,6 +122,7 @@ const CHECKS: ReadonlyArray<readonly [CheckName, Runner]> = [
   ["must_mention", (expect, answer) => checkMustMention(expect.must_mention, answer)],
   ["must_not_mention", (expect, answer) => checkMustNotMention(expect.must_not_mention, answer)],
   ["facts_required", (_expect, answer) => checkFactsRequired(answer)],
+  ["facts_have_event_sources", (_expect, answer) => checkFactsHaveEventSources(answer)],
 ];
 
 /** Tells whether an expectation is set: a non-empty list, or `true`. */
@@ -123,7 +133,7 @@ function isSet(value: Expectations[CheckName]): boolean {
 /**
  * Runs the checks whose expectation is set and returns their results, always
  * in the order must_cite, must_cite_any, must_not_cite, evidence_level,
- * must_mention, must_not_mention, facts_required.
+ * must_mention, must_not_mention, facts_required, facts_have_event_sources.
  */
 export function runChecks(expect: Expectations, answer: AnswerOutput): CheckResult[] {
   return CHECKS.filter(([name]) => isSet(expect[name])).map(([, run]) => run(expect, answer));

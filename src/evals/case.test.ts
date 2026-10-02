@@ -26,12 +26,13 @@ const full = {
     must_mention: ["cloud"],
     must_not_mention: ["Red Sea"],
     facts_required: true,
+    facts_have_event_sources: false,
   },
   judge: ["Explains the cost mechanism for each event."],
 };
 
 describe("EvalCaseSchema", () => {
-  it("fills every omitted list with an empty list and facts_required with false", () => {
+  it("fills omitted lists with empty lists and boolean expectations with false", () => {
     expect(EvalCaseSchema.parse(minimal)).toEqual({
       ...minimal,
       history: [],
@@ -43,6 +44,7 @@ describe("EvalCaseSchema", () => {
         must_mention: [],
         must_not_mention: [],
         facts_required: false,
+        facts_have_event_sources: false,
       },
       judge: [],
     });

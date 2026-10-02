@@ -64,6 +64,7 @@ describe("eval results", () => {
     expect(evaluationPassed([fakeResult({ status: "failed", answer: null })])).toBe(false);
     expect(evaluationPassed([fakeResult({ judgeError: "Unavailable." })])).toBe(false);
     expect(evaluationPassed([])).toBe(false);
+    expect(evaluationPassed([fakeResult({ checks: [] })])).toBe(false);
   });
   it("formats stable, escaped run and default-case tables", () => {
     const tables = formatTables([fakeResult({ caseId: "case|with\nline" })]);

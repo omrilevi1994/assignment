@@ -1,8 +1,8 @@
 import type { CaseResult, RunSummary } from "./types";
 
-/** True only when an answer exists and every active deterministic check passes. */
+/** True only when an answer exists and at least one deterministic check runs, with all passing. */
 export function casePassed(result: CaseResult): boolean {
-  return result.status !== "failed" && result.answer !== null && result.checks.every((check) => check.pass);
+  return result.status !== "failed" && result.answer !== null && result.checks.length > 0 && result.checks.every((check) => check.pass);
 }
 
 /** The command fails on any deterministic or execution failure after preserving its report. */

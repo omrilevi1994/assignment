@@ -38,6 +38,8 @@ export const ExpectationsSchema = z.strictObject({
   must_not_mention: z.array(z.string().min(1)).default([]),
   /** When true the answer must state at least one fact. */
   facts_required: z.boolean().default(false),
+  /** When true every stated fact needs an event citation; a refusal may state no facts. */
+  facts_have_event_sources: z.boolean().default(false),
 });
 
 export type Expectations = z.infer<typeof ExpectationsSchema>;

@@ -4,6 +4,7 @@ import { ExpectationsSchema } from "@/evals/case";
 import {
   checkEvidenceLevel,
   checkFactsRequired,
+  checkFactsHaveEventSources,
   checkMustCite,
   checkMustCiteAny,
   checkMustMention,
@@ -167,6 +168,33 @@ describe("checkFactsRequired", () => {
     const result = checkFactsRequired({ ...empty, analysis: [claim("Costs may rise.", ev("evt_004"))] });
     expect(result).toMatchObject({ name: "facts_required", pass: false });
     expect(result.detail).not.toBe("");
+  });
+});
+
+describe("checkFactsHaveEventSources", () => {
+  it("passes when every fact cites an event", () => {
+    expect(checkFactsHaveEventSources(answer)).toMatchObject({ name: "facts_have_event_sources", pass: true });
+  });
+
+  it("allows a safe refusal with no factual claims", () => {
+    expect(checkFactsHaveEventSources(empty).pass).toBe(true);
+  });
+
+  it.each([
+    ["uncited", []],
+    ["profile-only", [{ type: "company_profile", field: "critical_dependencies" }]],
+  ] as const)("rejects a deliberately %s factual claim", (_label, sources) => {
+    const ungrounded = { ...answer, facts: [...answer.facts, claim("Asteron's Poland plant lost power.", ...sources)] };
+    const result = checkFactsHaveEventSources(ungrounded);
+    expect(result.pass).toBe(false);
+    expect(result.detail).toContain("Asteron's Poland plant lost power.");
+  });
+
+  it("runs when the case enables fact citation coverage", () => {
+    const expectation = ExpectationsSchema.parse({ facts_have_event_sources: true });
+    expect(runChecks(expectation, { ...empty, facts: [claim("The plant closed.")] })).toEqual([
+      { name: "facts_have_event_sources", pass: false, detail: "Facts without event citations: The plant closed." },
+    ]);
   });
 });
 
