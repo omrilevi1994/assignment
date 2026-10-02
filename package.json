@@ -9,6 +9,7 @@
     "dev": "next dev",
     "dev:up": "docker compose up -d --wait db && next dev",
     "dev:down": "docker compose down",
+    "data:convert": "tsx scripts/data-convert.ts",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . && depcruise src",
