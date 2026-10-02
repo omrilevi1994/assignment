@@ -1,0 +1,3215 @@
+[
+  {
+    "id": "aion-labs/aion-2.0",
+    "name": "AionLabs: Aion-2.0",
+    "promptUsdPerToken": 8e-7,
+    "completionUsdPerToken": 0.0000016,
+    "contextLength": 131072
+  },
+  {
+    "id": "aion-labs/aion-3.0",
+    "name": "AionLabs: Aion-3.0",
+    "promptUsdPerToken": 0.000003,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 131072
+  },
+  {
+    "id": "aion-labs/aion-3.0-mini",
+    "name": "AionLabs: Aion-3.0-Mini",
+    "promptUsdPerToken": 7e-7,
+    "completionUsdPerToken": 0.0000014,
+    "contextLength": 131072
+  },
+  {
+    "id": "aion-labs/aion-3.5",
+    "name": "AionLabs: Aion 3.5",
+    "promptUsdPerToken": 0.000003,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 262144
+  },
+  {
+    "id": "aion-labs/aion-3.5-mini",
+    "name": "AionLabs: Aion 3.5 Mini",
+    "promptUsdPerToken": 7e-7,
+    "completionUsdPerToken": 0.0000014,
+    "contextLength": 262144
+  },
+  {
+    "id": "aion-labs/aion-rp-llama-3.1-8b",
+    "name": "AionLabs: Aion-RP 1.0 (8B)",
+    "promptUsdPerToken": 8e-7,
+    "completionUsdPerToken": 0.0000016,
+    "contextLength": 32768
+  },
+  {
+    "id": "amazon/nova-2-lite-v1",
+    "name": "Amazon: Nova 2 Lite",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.0000025,
+    "contextLength": 1000000
+  },
+  {
+    "id": "amazon/nova-lite-v1",
+    "name": "Amazon: Nova Lite 1.0",
+    "promptUsdPerToken": 6e-8,
+    "completionUsdPerToken": 2.4e-7,
+    "contextLength": 300000
+  },
+  {
+    "id": "amazon/nova-micro-v1",
+    "name": "Amazon: Nova Micro 1.0",
+    "promptUsdPerToken": 3.5e-8,
+    "completionUsdPerToken": 1.4e-7,
+    "contextLength": 128000
+  },
+  {
+    "id": "amazon/nova-premier-v1",
+    "name": "Amazon: Nova Premier 1.0",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.0000125,
+    "contextLength": 1000000
+  },
+  {
+    "id": "amazon/nova-pro-v1",
+    "name": "Amazon: Nova Pro 1.0",
+    "promptUsdPerToken": 8e-7,
+    "completionUsdPerToken": 0.0000032,
+    "contextLength": 300000
+  },
+  {
+    "id": "anthracite-org/magnum-v4-72b",
+    "name": "Magnum v4 72B",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 32768
+  },
+  {
+    "id": "anthropic/claude-fable-5",
+    "name": "Anthropic: Claude Fable 5",
+    "promptUsdPerToken": 0.00001,
+    "completionUsdPerToken": 0.00005,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-fable-5.1",
+    "name": "Anthropic: Claude Fable 5.1",
+    "promptUsdPerToken": 0.00001,
+    "completionUsdPerToken": 0.00005,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-fable-5.1:batch",
+    "name": "Anthropic: Claude Fable 5.1 (batch)",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.000025,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-fable-5:batch",
+    "name": "Anthropic: Claude Fable 5 (batch)",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.000025,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-haiku-4.5",
+    "name": "Anthropic: Claude Haiku 4.5",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 200000
+  },
+  {
+    "id": "anthropic/claude-haiku-4.5:batch",
+    "name": "Anthropic: Claude Haiku 4.5 (batch)",
+    "promptUsdPerToken": 5e-7,
+    "completionUsdPerToken": 0.0000025,
+    "contextLength": 200000
+  },
+  {
+    "id": "anthropic/claude-opus-4.1",
+    "name": "Anthropic: Claude Opus 4.1",
+    "promptUsdPerToken": 0.000015,
+    "completionUsdPerToken": 0.000075,
+    "contextLength": 200000
+  },
+  {
+    "id": "anthropic/claude-opus-4.1:batch",
+    "name": "Anthropic: Claude Opus 4.1 (batch)",
+    "promptUsdPerToken": 0.0000075,
+    "completionUsdPerToken": 0.0000375,
+    "contextLength": 200000
+  },
+  {
+    "id": "anthropic/claude-opus-4.5",
+    "name": "Anthropic: Claude Opus 4.5",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.000025,
+    "contextLength": 200000
+  },
+  {
+    "id": "anthropic/claude-opus-4.5:batch",
+    "name": "Anthropic: Claude Opus 4.5 (batch)",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.0000125,
+    "contextLength": 200000
+  },
+  {
+    "id": "anthropic/claude-opus-4.6",
+    "name": "Anthropic: Claude Opus 4.6",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.000025,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-opus-4.6:batch",
+    "name": "Anthropic: Claude Opus 4.6 (batch)",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.0000125,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-opus-4.7",
+    "name": "Anthropic: Claude Opus 4.7",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.000025,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-opus-4.7:batch",
+    "name": "Anthropic: Claude Opus 4.7 (batch)",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.0000125,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-opus-4.8",
+    "name": "Anthropic: Claude Opus 4.8",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.000025,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-opus-4.8:batch",
+    "name": "Anthropic: Claude Opus 4.8 (batch)",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.0000125,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-opus-5",
+    "name": "Anthropic: Claude Opus 5",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.000025,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-opus-5.5",
+    "name": "Anthropic: Claude Opus 5.5",
+    "promptUsdPerToken": 0.000004,
+    "completionUsdPerToken": 0.00002,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-opus-5.5:batch",
+    "name": "Anthropic: Claude Opus 5.5 (batch)",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-opus-5:batch",
+    "name": "Anthropic: Claude Opus 5 (batch)",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.0000125,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-sonnet-4",
+    "name": "Anthropic: Claude Sonnet 4",
+    "promptUsdPerToken": 0.000003,
+    "completionUsdPerToken": 0.000015,
+    "contextLength": 200000
+  },
+  {
+    "id": "anthropic/claude-sonnet-4.5",
+    "name": "Anthropic: Claude Sonnet 4.5",
+    "promptUsdPerToken": 0.000003,
+    "completionUsdPerToken": 0.000015,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-sonnet-4.5:batch",
+    "name": "Anthropic: Claude Sonnet 4.5 (batch)",
+    "promptUsdPerToken": 0.0000015,
+    "completionUsdPerToken": 0.0000075,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-sonnet-4.6",
+    "name": "Anthropic: Claude Sonnet 4.6",
+    "promptUsdPerToken": 0.000003,
+    "completionUsdPerToken": 0.000015,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-sonnet-4.6:batch",
+    "name": "Anthropic: Claude Sonnet 4.6 (batch)",
+    "promptUsdPerToken": 0.0000015,
+    "completionUsdPerToken": 0.0000075,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-sonnet-5",
+    "name": "Anthropic: Claude Sonnet 5",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-sonnet-5.5",
+    "name": "Anthropic: Claude Sonnet 5.5",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-sonnet-5.5:batch",
+    "name": "Anthropic: Claude Sonnet 5.5 (batch)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 1000000
+  },
+  {
+    "id": "anthropic/claude-sonnet-5:batch",
+    "name": "Anthropic: Claude Sonnet 5 (batch)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 1000000
+  },
+  {
+    "id": "apodex/apodex-1.1-mini:free",
+    "name": "Apodex: Apodex 1.1 Mini (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 262144
+  },
+  {
+    "id": "arcee-ai/trinity-large-thinking",
+    "name": "Arcee AI: Trinity Large Thinking",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 8e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "baidu/ernie-4.5-vl-424b-a47b",
+    "name": "Baidu: ERNIE 4.5 VL 424B A47B ",
+    "promptUsdPerToken": 4.2e-7,
+    "completionUsdPerToken": 0.00000125,
+    "contextLength": 123000
+  },
+  {
+    "id": "bytedance-seed/seed-1.6",
+    "name": "ByteDance Seed: Seed 1.6",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 262144
+  },
+  {
+    "id": "bytedance-seed/seed-1.6-flash",
+    "name": "ByteDance Seed: Seed 1.6 Flash",
+    "promptUsdPerToken": 7.5e-8,
+    "completionUsdPerToken": 3e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "bytedance-seed/seed-2-1-turbo",
+    "name": "ByteDance Seed: Seed 2.1 Turbo",
+    "promptUsdPerToken": 5e-7,
+    "completionUsdPerToken": 0.0000025,
+    "contextLength": 262144
+  },
+  {
+    "id": "bytedance-seed/seed-2.0-code",
+    "name": "ByteDance Seed: Seed-2.0-Code",
+    "promptUsdPerToken": 5e-7,
+    "completionUsdPerToken": 0.000003,
+    "contextLength": 262144
+  },
+  {
+    "id": "bytedance-seed/seed-2.0-lite",
+    "name": "ByteDance Seed: Seed-2.0-Lite",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 262144
+  },
+  {
+    "id": "bytedance-seed/seed-2.0-mini",
+    "name": "ByteDance Seed: Seed-2.0-Mini",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 4e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "bytedance/ui-tars-1.5-7b",
+    "name": "ByteDance: UI-TARS 7B ",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 128000
+  },
+  {
+    "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition",
+    "name": "Venice: Uncensored",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 9e-7,
+    "contextLength": 128000
+  },
+  {
+    "id": "cohere/command-a",
+    "name": "Cohere: Command A",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 256000
+  },
+  {
+    "id": "cohere/command-a-plus",
+    "name": "Cohere: Command A+",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.0000015,
+    "contextLength": 192000
+  },
+  {
+    "id": "cohere/command-r-08-2024",
+    "name": "Cohere: Command R (08-2024)",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 6e-7,
+    "contextLength": 128000
+  },
+  {
+    "id": "cohere/command-r-plus-08-2024",
+    "name": "Cohere: Command R+ (08-2024)",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 128000
+  },
+  {
+    "id": "cohere/command-r7b-12-2024",
+    "name": "Cohere: Command R7B (12-2024)",
+    "promptUsdPerToken": 3.75e-8,
+    "completionUsdPerToken": 1.5e-7,
+    "contextLength": 128000
+  },
+  {
+    "id": "cohere/north-mini-code:free",
+    "name": "Cohere: North Mini Code (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 256000
+  },
+  {
+    "id": "deepseek/deepseek-chat",
+    "name": "DeepSeek: DeepSeek V3",
+    "promptUsdPerToken": 2.574e-7,
+    "completionUsdPerToken": 0.0000010287,
+    "contextLength": 163840
+  },
+  {
+    "id": "deepseek/deepseek-chat-v3-0324",
+    "name": "DeepSeek: DeepSeek V3 0324",
+    "promptUsdPerToken": 2.9e-7,
+    "completionUsdPerToken": 0.00000114,
+    "contextLength": 163840
+  },
+  {
+    "id": "deepseek/deepseek-chat-v3.1",
+    "name": "DeepSeek: DeepSeek V3.1",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 9.5e-7,
+    "contextLength": 163840
+  },
+  {
+    "id": "deepseek/deepseek-r1",
+    "name": "DeepSeek: R1",
+    "promptUsdPerToken": 7e-7,
+    "completionUsdPerToken": 0.0000025,
+    "contextLength": 64000
+  },
+  {
+    "id": "deepseek/deepseek-r1-0528",
+    "name": "DeepSeek: R1 0528",
+    "promptUsdPerToken": 5e-7,
+    "completionUsdPerToken": 0.00000215,
+    "contextLength": 163840
+  },
+  {
+    "id": "deepseek/deepseek-v3.1-terminus",
+    "name": "DeepSeek: DeepSeek V3.1 Terminus",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.000001,
+    "contextLength": 163840
+  },
+  {
+    "id": "deepseek/deepseek-v3.2",
+    "name": "DeepSeek: DeepSeek V3.2",
+    "promptUsdPerToken": 2.8e-7,
+    "completionUsdPerToken": 4.2e-7,
+    "contextLength": 163840
+  },
+  {
+    "id": "deepseek/deepseek-v3.2-exp",
+    "name": "DeepSeek: DeepSeek V3.2 Exp",
+    "promptUsdPerToken": 2.7e-7,
+    "completionUsdPerToken": 4.1e-7,
+    "contextLength": 163840
+  },
+  {
+    "id": "deepseek/deepseek-v4-flash",
+    "name": "DeepSeek: DeepSeek V4 Flash 0423",
+    "promptUsdPerToken": 2.8e-8,
+    "completionUsdPerToken": 5.6e-8,
+    "contextLength": 1048576
+  },
+  {
+    "id": "deepseek/deepseek-v4-flash-0731",
+    "name": "DeepSeek: DeepSeek V4 Flash 0731",
+    "promptUsdPerToken": 1.71e-8,
+    "completionUsdPerToken": 0.00000128,
+    "contextLength": 1048576
+  },
+  {
+    "id": "deepseek/deepseek-v4-flash-vision-exp",
+    "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+    "promptUsdPerToken": 2.156e-7,
+    "completionUsdPerToken": 6.468e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "deepseek/deepseek-v4-pro",
+    "name": "DeepSeek: DeepSeek V4 Pro 0423",
+    "promptUsdPerToken": 2.088e-7,
+    "completionUsdPerToken": 4.176e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "deepseek/deepseek-v4-pro-0813",
+    "name": "DeepSeek: DeepSeek V4 Pro 0813",
+    "promptUsdPerToken": 6.6e-7,
+    "completionUsdPerToken": 0.00000198,
+    "contextLength": 1048576
+  },
+  {
+    "id": "deepseek/deepseek-v4.1-flash",
+    "name": "DeepSeek: DeepSeek V4.1 Flash",
+    "promptUsdPerToken": 2e-8,
+    "completionUsdPerToken": 6e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "deepseek/deepseek-v4.1-flash:batch",
+    "name": "DeepSeek: DeepSeek V4.1 Flash (batch)",
+    "promptUsdPerToken": 1.12e-7,
+    "completionUsdPerToken": 3.36e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "dots-studio/dots-3-note-preview:free",
+    "name": "Dots Studio: Dots3-Note Preview (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 512000
+  },
+  {
+    "id": "fireworks/ember-1",
+    "name": "Fireworks: Ember-1",
+    "promptUsdPerToken": 0.000003,
+    "completionUsdPerToken": 0.000015,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-2.5-flash",
+    "name": "Google: Gemini 2.5 Flash",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.0000025,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-2.5-flash-image",
+    "name": "Google: Nano Banana (Gemini 2.5 Flash Image)",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.0000025,
+    "contextLength": 32768
+  },
+  {
+    "id": "google/gemini-2.5-flash-lite",
+    "name": "Google: Gemini 2.5 Flash Lite",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 4e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-2.5-flash-lite:batch",
+    "name": "Google: Gemini 2.5 Flash Lite (batch)",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-2.5-flash:batch",
+    "name": "Google: Gemini 2.5 Flash (batch)",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 0.00000125,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-2.5-pro",
+    "name": "Google: Gemini 2.5 Pro",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-2.5-pro-preview",
+    "name": "Google: Gemini 2.5 Pro Preview 06-05",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-2.5-pro:batch",
+    "name": "Google: Gemini 2.5 Pro (batch)",
+    "promptUsdPerToken": 6.25e-7,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3-flash-preview",
+    "name": "Google: Gemini 3 Flash Preview",
+    "promptUsdPerToken": 5e-7,
+    "completionUsdPerToken": 0.000003,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3-flash-preview:batch",
+    "name": "Google: Gemini 3 Flash Preview (batch)",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 0.0000015,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3-pro-image",
+    "name": "Google: Nano Banana Pro (Gemini 3 Pro Image)",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000012,
+    "contextLength": 131072
+  },
+  {
+    "id": "google/gemini-3-pro-image-preview",
+    "name": "Google: Nano Banana Pro (Gemini 3 Pro Image Preview)",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000012,
+    "contextLength": 65536
+  },
+  {
+    "id": "google/gemini-3.1-flash-image",
+    "name": "Google: Nano Banana 2 (Gemini 3.1 Flash Image)",
+    "promptUsdPerToken": 5e-7,
+    "completionUsdPerToken": 0.000003,
+    "contextLength": 131072
+  },
+  {
+    "id": "google/gemini-3.1-flash-image-preview",
+    "name": "Google: Nano Banana 2 (Gemini 3.1 Flash Image Preview)",
+    "promptUsdPerToken": 5e-7,
+    "completionUsdPerToken": 0.000003,
+    "contextLength": 65536
+  },
+  {
+    "id": "google/gemini-3.1-flash-lite",
+    "name": "Google: Gemini 3.1 Flash Lite",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 0.0000015,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.1-flash-lite-image",
+    "name": "Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 0.0000015,
+    "contextLength": 65536
+  },
+  {
+    "id": "google/gemini-3.1-flash-lite-preview",
+    "name": "Google: Gemini 3.1 Flash Lite Preview",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 0.0000015,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.1-flash-lite:batch",
+    "name": "Google: Gemini 3.1 Flash Lite (batch)",
+    "promptUsdPerToken": 1.25e-7,
+    "completionUsdPerToken": 7.5e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.1-pro-preview",
+    "name": "Google: Gemini 3.1 Pro Preview",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000012,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.1-pro-preview-customtools",
+    "name": "Google: Gemini 3.1 Pro Preview Custom Tools",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000012,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.1-pro-preview:batch",
+    "name": "Google: Gemini 3.1 Pro Preview (batch)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.5-flash",
+    "name": "Google: Gemini 3.5 Flash",
+    "promptUsdPerToken": 0.0000015,
+    "completionUsdPerToken": 0.000009,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.5-flash-lite",
+    "name": "Google: Gemini 3.5 Flash Lite",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.0000025,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.5-flash-lite:batch",
+    "name": "Google: Gemini 3.5 Flash Lite (batch)",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 0.00000125,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.5-flash:batch",
+    "name": "Google: Gemini 3.5 Flash (batch)",
+    "promptUsdPerToken": 7.5e-7,
+    "completionUsdPerToken": 0.0000045,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.6-flash",
+    "name": "Google: Gemini 3.6 Flash",
+    "promptUsdPerToken": 7.5e-7,
+    "completionUsdPerToken": 0.00000375,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.6-flash:batch",
+    "name": "Google: Gemini 3.6 Flash (batch)",
+    "promptUsdPerToken": 3.75e-7,
+    "completionUsdPerToken": 0.000001875,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.7-flash",
+    "name": "Google: Gemini 3.7 Flash",
+    "promptUsdPerToken": 7.5e-7,
+    "completionUsdPerToken": 0.00000375,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.7-flash:batch",
+    "name": "Google: Gemini 3.7 Flash (batch)",
+    "promptUsdPerToken": 3.75e-7,
+    "completionUsdPerToken": 0.000001875,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.8-flash",
+    "name": "Google: Gemini 3.8 Flash",
+    "promptUsdPerToken": 7.5e-7,
+    "completionUsdPerToken": 0.00000375,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemini-3.8-flash:batch",
+    "name": "Google: Gemini 3.8 Flash (batch)",
+    "promptUsdPerToken": 3.75e-7,
+    "completionUsdPerToken": 0.000001875,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/gemma-2-27b-it",
+    "name": "Google: Gemma 2 27B",
+    "promptUsdPerToken": 6.5e-7,
+    "completionUsdPerToken": 6.5e-7,
+    "contextLength": 8192
+  },
+  {
+    "id": "google/gemma-3-12b-it",
+    "name": "Google: Gemma 3 12B",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 1.5e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "google/gemma-3-27b-it",
+    "name": "Google: Gemma 3 27B",
+    "promptUsdPerToken": 8e-8,
+    "completionUsdPerToken": 4.5e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "google/gemma-3-4b-it",
+    "name": "Google: Gemma 3 4B",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 1e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "google/gemma-4-26b-a4b-it",
+    "name": "Google: Gemma 4 26B A4B ",
+    "promptUsdPerToken": 6.75e-8,
+    "completionUsdPerToken": 2.25e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "google/gemma-4-26b-a4b-it:free",
+    "name": "Google: Gemma 4 26B A4B  (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 262144
+  },
+  {
+    "id": "google/gemma-4-31b-it",
+    "name": "Google: Gemma 4 31B",
+    "promptUsdPerToken": 9e-8,
+    "completionUsdPerToken": 3.4e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "google/gemma-4-31b-it:free",
+    "name": "Google: Gemma 4 31B (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 262144
+  },
+  {
+    "id": "google/lyria-3-clip-preview",
+    "name": "Google: Lyria 3 Clip Preview",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 1048576
+  },
+  {
+    "id": "google/lyria-3-pro-preview",
+    "name": "Google: Lyria 3 Pro Preview",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 1048576
+  },
+  {
+    "id": "gryphe/mythomax-l2-13b",
+    "name": "MythoMax 13B",
+    "promptUsdPerToken": 8e-8,
+    "completionUsdPerToken": 1.1e-7,
+    "contextLength": 8192
+  },
+  {
+    "id": "ibm-granite/granite-4.0-h-micro",
+    "name": "IBM: Granite 4.0 Micro",
+    "promptUsdPerToken": 1.7e-8,
+    "completionUsdPerToken": 1.12e-7,
+    "contextLength": 131000
+  },
+  {
+    "id": "ibm-granite/granite-4.2-8b",
+    "name": "IBM: Granite 4.2 8B",
+    "promptUsdPerToken": 6e-8,
+    "completionUsdPerToken": 2.5e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "inception/mercury-2",
+    "name": "Inception: Mercury 2",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 7.5e-7,
+    "contextLength": 128000
+  },
+  {
+    "id": "inception/mercury-2.5",
+    "name": "Inception: Mercury 2.5",
+    "promptUsdPerToken": 4e-8,
+    "completionUsdPerToken": 1.5e-7,
+    "contextLength": 260000
+  },
+  {
+    "id": "inclusionai/ling-3.0-flash",
+    "name": "inclusionAI: Ling 3.0 Flash",
+    "promptUsdPerToken": 2.1e-8,
+    "completionUsdPerToken": 6.3e-8,
+    "contextLength": 262144
+  },
+  {
+    "id": "inclusionai/ling-3.0-flash-fin",
+    "name": "inclusionAI: Ling 3.0 Flash Fin",
+    "promptUsdPerToken": 4.2e-8,
+    "completionUsdPerToken": 1.232e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "inclusionai/ling-3.0-flash-sante:free",
+    "name": "inclusionAI: Ling 3.0 Flash Sante (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 262144
+  },
+  {
+    "id": "inclusionai/ling-3.0-flash-vl",
+    "name": "inclusionAI: Ling 3.0 Flash VL",
+    "promptUsdPerToken": 2.1e-8,
+    "completionUsdPerToken": 6.16e-8,
+    "contextLength": 262144
+  },
+  {
+    "id": "inclusionai/ling-3.1-flash",
+    "name": "inclusionAI: Ling 3.1 Flash",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 262144
+  },
+  {
+    "id": "inference-net/schematron-v2-small",
+    "name": "Inference.net: Schematron V2 Small",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 2.3e-7,
+    "contextLength": 128000
+  },
+  {
+    "id": "inference-net/schematron-v2-turbo",
+    "name": "Inference.net: Schematron V2 Turbo",
+    "promptUsdPerToken": 3e-8,
+    "completionUsdPerToken": 1.5e-7,
+    "contextLength": 128000
+  },
+  {
+    "id": "kwaipilot/kat-coder-pro-v2.5",
+    "name": "Kwaipilot: KAT-Coder-Pro V2.5",
+    "promptUsdPerToken": 7.4e-7,
+    "completionUsdPerToken": 0.00000296,
+    "contextLength": 262144
+  },
+  {
+    "id": "liquid/lfm-2.5-2.6b:free",
+    "name": "LiquidAI: LFM2.5-2.6B (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 65536
+  },
+  {
+    "id": "mancer/weaver",
+    "name": "Mancer: Weaver (alpha)",
+    "promptUsdPerToken": 4e-7,
+    "completionUsdPerToken": 7.5e-7,
+    "contextLength": 8000
+  },
+  {
+    "id": "meituan/longcat-2.0",
+    "name": "Meituan: LongCat 2.0",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.0000012,
+    "contextLength": 1048756
+  },
+  {
+    "id": "meta-llama/llama-3.1-70b-instruct",
+    "name": "Meta: Llama 3.1 70B Instruct",
+    "promptUsdPerToken": 4e-7,
+    "completionUsdPerToken": 4e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "meta-llama/llama-3.1-8b-instruct",
+    "name": "Meta: Llama 3.1 8B Instruct",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 8e-8,
+    "contextLength": 131072
+  },
+  {
+    "id": "meta-llama/llama-3.2-1b-instruct",
+    "name": "Meta: Llama 3.2 1B Instruct",
+    "promptUsdPerToken": 2.7e-8,
+    "completionUsdPerToken": 2.01e-7,
+    "contextLength": 60000
+  },
+  {
+    "id": "meta-llama/llama-3.2-3b-instruct",
+    "name": "Meta: Llama 3.2 3B Instruct",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 3.3e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "meta-llama/llama-3.3-70b-instruct",
+    "name": "Meta: Llama 3.3 70B Instruct",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 3.2e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "meta-llama/llama-4-maverick",
+    "name": "Meta: Llama 4 Maverick",
+    "promptUsdPerToken": 1.875e-7,
+    "completionUsdPerToken": 6.525e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "meta-llama/llama-4-scout",
+    "name": "Meta: Llama 4 Scout",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 3e-7,
+    "contextLength": 1310720
+  },
+  {
+    "id": "meta-llama/llama-guard-4-12b",
+    "name": "Meta: Llama Guard 4 12B",
+    "promptUsdPerToken": 1.8e-7,
+    "completionUsdPerToken": 1.8e-7,
+    "contextLength": 163840
+  },
+  {
+    "id": "meta/muse-glimmer-30b",
+    "name": "Meta: Muse Glimmer 30B",
+    "promptUsdPerToken": 3.5e-7,
+    "completionUsdPerToken": 0.0000015,
+    "contextLength": 131072
+  },
+  {
+    "id": "meta/muse-spark-1.1",
+    "name": "Meta: Muse Spark 1.1",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.00000425,
+    "contextLength": 1048576
+  },
+  {
+    "id": "meta/muse-spark-1.2",
+    "name": "Meta: Muse Spark 1.2",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.00000425,
+    "contextLength": 1048576
+  },
+  {
+    "id": "meta/muse-spark-1.2-contributor",
+    "name": "Meta: Muse Spark 1.2 Contributor",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "meta/muse-spark-1.3",
+    "name": "Meta: Muse Spark 1.3",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.00000425,
+    "contextLength": 1048576
+  },
+  {
+    "id": "meta/muse-spark-1.3-contributor",
+    "name": "Meta: Muse Spark 1.3 Contributor",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "microsoft/phi-4",
+    "name": "Microsoft: Phi 4",
+    "promptUsdPerToken": 7e-8,
+    "completionUsdPerToken": 1.4e-7,
+    "contextLength": 16384
+  },
+  {
+    "id": "microsoft/wizardlm-2-8x22b",
+    "name": "WizardLM-2 8x22B",
+    "promptUsdPerToken": 6.2e-7,
+    "completionUsdPerToken": 6.2e-7,
+    "contextLength": 65535
+  },
+  {
+    "id": "minimax/minimax-01",
+    "name": "MiniMax: MiniMax-01",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 0.0000011,
+    "contextLength": 1000192
+  },
+  {
+    "id": "minimax/minimax-m1",
+    "name": "MiniMax: MiniMax M1",
+    "promptUsdPerToken": 5.5e-7,
+    "completionUsdPerToken": 0.0000022,
+    "contextLength": 1000000
+  },
+  {
+    "id": "minimax/minimax-m2",
+    "name": "MiniMax: MiniMax M2",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.0000012,
+    "contextLength": 204800
+  },
+  {
+    "id": "minimax/minimax-m2-her",
+    "name": "MiniMax: MiniMax M2-her",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.0000012,
+    "contextLength": 65536
+  },
+  {
+    "id": "minimax/minimax-m2.1",
+    "name": "MiniMax: MiniMax M2.1",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.0000012,
+    "contextLength": 204800
+  },
+  {
+    "id": "minimax/minimax-m2.5",
+    "name": "MiniMax: MiniMax M2.5",
+    "promptUsdPerToken": 2.7e-7,
+    "completionUsdPerToken": 0.00000108,
+    "contextLength": 204800
+  },
+  {
+    "id": "minimax/minimax-m2.7",
+    "name": "MiniMax: MiniMax M2.7",
+    "promptUsdPerToken": 2.1e-7,
+    "completionUsdPerToken": 8.4e-7,
+    "contextLength": 204800
+  },
+  {
+    "id": "minimax/minimax-m3",
+    "name": "MiniMax: MiniMax M3",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.0000012,
+    "contextLength": 1048576
+  },
+  {
+    "id": "mistralai/codestral-2508",
+    "name": "Mistral: Codestral 2508",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 9e-7,
+    "contextLength": 256000
+  },
+  {
+    "id": "mistralai/codestral-2508:batch",
+    "name": "Mistral: Codestral 2508 (batch)",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 4.5e-7,
+    "contextLength": 256000
+  },
+  {
+    "id": "mistralai/devstral-2512",
+    "name": "Mistral: Devstral 2 2512",
+    "promptUsdPerToken": 4e-7,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 262144
+  },
+  {
+    "id": "mistralai/ministral-14b-2512",
+    "name": "Mistral: Ministral 3 14B 2512",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "mistralai/ministral-3b-2512",
+    "name": "Mistral: Ministral 3 3B 2512",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 1e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "mistralai/ministral-8b-2512",
+    "name": "Mistral: Ministral 3 8B 2512",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 1.5e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "mistralai/ministral-8b-2512:batch",
+    "name": "Mistral: Ministral 3 8B 2512 (batch)",
+    "promptUsdPerToken": 7.5e-8,
+    "completionUsdPerToken": 7.5e-8,
+    "contextLength": 262144
+  },
+  {
+    "id": "mistralai/mistral-large",
+    "name": "Mistral Large",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 128000
+  },
+  {
+    "id": "mistralai/mistral-large-2407",
+    "name": "Mistral Large 2407",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 131072
+  },
+  {
+    "id": "mistralai/mistral-large-2512",
+    "name": "Mistral: Mistral Large 3 2512",
+    "promptUsdPerToken": 5e-7,
+    "completionUsdPerToken": 0.0000015,
+    "contextLength": 262144
+  },
+  {
+    "id": "mistralai/mistral-large-2512:batch",
+    "name": "Mistral: Mistral Large 3 2512 (batch)",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 7.5e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "mistralai/mistral-medium-3",
+    "name": "Mistral: Mistral Medium 3",
+    "promptUsdPerToken": 4e-7,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 131072
+  },
+  {
+    "id": "mistralai/mistral-medium-3-5",
+    "name": "Mistral: Mistral Medium 3.5",
+    "promptUsdPerToken": 0.0000015,
+    "completionUsdPerToken": 0.0000075,
+    "contextLength": 262144
+  },
+  {
+    "id": "mistralai/mistral-medium-3-5:batch",
+    "name": "Mistral: Mistral Medium 3.5 (batch)",
+    "promptUsdPerToken": 7.5e-7,
+    "completionUsdPerToken": 0.00000375,
+    "contextLength": 262144
+  },
+  {
+    "id": "mistralai/mistral-medium-3.1",
+    "name": "Mistral: Mistral Medium 3.1",
+    "promptUsdPerToken": 4e-7,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 131072
+  },
+  {
+    "id": "mistralai/mistral-medium-3.1:batch",
+    "name": "Mistral: Mistral Medium 3.1 (batch)",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 0.000001,
+    "contextLength": 131072
+  },
+  {
+    "id": "mistralai/mistral-nemo",
+    "name": "Mistral: Mistral Nemo",
+    "promptUsdPerToken": 1.9e-8,
+    "completionUsdPerToken": 3e-8,
+    "contextLength": 131072
+  },
+  {
+    "id": "mistralai/mistral-saba",
+    "name": "Mistral: Saba",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 6e-7,
+    "contextLength": 32768
+  },
+  {
+    "id": "mistralai/mistral-small-24b-instruct-2501",
+    "name": "Mistral: Mistral Small 3",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 8e-8,
+    "contextLength": 32768
+  },
+  {
+    "id": "mistralai/mistral-small-2603",
+    "name": "Mistral: Mistral Small 4",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 6e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "mistralai/mistral-small-2603:batch",
+    "name": "Mistral: Mistral Small 4 (batch)",
+    "promptUsdPerToken": 7.5e-8,
+    "completionUsdPerToken": 3e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "mistralai/mistral-small-3.1-24b-instruct",
+    "name": "Mistral: Mistral Small 3.1 24B",
+    "promptUsdPerToken": 3.51e-7,
+    "completionUsdPerToken": 5.55e-7,
+    "contextLength": 128000
+  },
+  {
+    "id": "mistralai/mistral-small-3.2-24b-instruct",
+    "name": "Mistral: Mistral Small 3.2 24B",
+    "promptUsdPerToken": 9.375e-8,
+    "completionUsdPerToken": 2.5e-7,
+    "contextLength": 256000
+  },
+  {
+    "id": "mistralai/mixtral-8x22b-instruct",
+    "name": "Mistral: Mixtral 8x22B Instruct",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 65536
+  },
+  {
+    "id": "mistralai/voxtral-small-24b-2507",
+    "name": "Mistral: Voxtral Small 24B 2507",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 3e-7,
+    "contextLength": 32768
+  },
+  {
+    "id": "moonshotai/kimi-k2",
+    "name": "MoonshotAI: Kimi K2 0711",
+    "promptUsdPerToken": 5.7e-7,
+    "completionUsdPerToken": 0.0000023,
+    "contextLength": 131072
+  },
+  {
+    "id": "moonshotai/kimi-k2-0905",
+    "name": "MoonshotAI: Kimi K2 0905",
+    "promptUsdPerToken": 6e-7,
+    "completionUsdPerToken": 0.0000025,
+    "contextLength": 262144
+  },
+  {
+    "id": "moonshotai/kimi-k2-thinking",
+    "name": "MoonshotAI: Kimi K2 Thinking",
+    "promptUsdPerToken": 6e-7,
+    "completionUsdPerToken": 0.0000025,
+    "contextLength": 262144
+  },
+  {
+    "id": "moonshotai/kimi-k2.5",
+    "name": "MoonshotAI: Kimi K2.5",
+    "promptUsdPerToken": 4.5e-7,
+    "completionUsdPerToken": 0.00000225,
+    "contextLength": 262144
+  },
+  {
+    "id": "moonshotai/kimi-k2.6",
+    "name": "MoonshotAI: Kimi K2.6",
+    "promptUsdPerToken": 4.3415e-7,
+    "completionUsdPerToken": 0.000001828,
+    "contextLength": 262144
+  },
+  {
+    "id": "moonshotai/kimi-k2.7-code",
+    "name": "MoonshotAI: Kimi K2.7 Code",
+    "promptUsdPerToken": 6.712e-7,
+    "completionUsdPerToken": 0.00000335,
+    "contextLength": 262144
+  },
+  {
+    "id": "moonshotai/kimi-k3",
+    "name": "MoonshotAI: Kimi K3",
+    "promptUsdPerToken": 0.0000027,
+    "completionUsdPerToken": 0.0000135,
+    "contextLength": 1048576
+  },
+  {
+    "id": "moonshotai/kimi-k3:batch",
+    "name": "MoonshotAI: Kimi K3 (batch)",
+    "promptUsdPerToken": 0.00000228,
+    "completionUsdPerToken": 0.0000114,
+    "contextLength": 1048576
+  },
+  {
+    "id": "morph/morph-v3-fast",
+    "name": "Morph: Morph V3 Fast",
+    "promptUsdPerToken": 8e-7,
+    "completionUsdPerToken": 0.0000012,
+    "contextLength": 81920
+  },
+  {
+    "id": "morph/morph-v3-large",
+    "name": "Morph: Morph V3 Large",
+    "promptUsdPerToken": 9e-7,
+    "completionUsdPerToken": 0.0000019,
+    "contextLength": 262144
+  },
+  {
+    "id": "nex-agi/nex-n2.5-mini",
+    "name": "Nex AGI: Nex-N2.5-Mini",
+    "promptUsdPerToken": 2.5e-8,
+    "completionUsdPerToken": 1e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "nex-agi/nex-n2.5-pro",
+    "name": "Nex AGI: Nex-N2.5-Pro",
+    "promptUsdPerToken": 7.5e-8,
+    "completionUsdPerToken": 2.5e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "nousresearch/hermes-3-llama-3.1-405b",
+    "name": "Nous: Hermes 3 405B Instruct",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000001,
+    "contextLength": 131072
+  },
+  {
+    "id": "nousresearch/hermes-3-llama-3.1-70b",
+    "name": "Nous: Hermes 3 70B Instruct",
+    "promptUsdPerToken": 7e-7,
+    "completionUsdPerToken": 7e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "nousresearch/hermes-4-405b",
+    "name": "Nous: Hermes 4 405B",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000003,
+    "contextLength": 131072
+  },
+  {
+    "id": "nvidia/nemotron-3-nano-30b-a3b",
+    "name": "NVIDIA: Nemotron 3 Nano 30B A3B",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 256000
+  },
+  {
+    "id": "nvidia/nemotron-3-super-120b-a12b",
+    "name": "NVIDIA: Nemotron 3 Super",
+    "promptUsdPerToken": 8e-8,
+    "completionUsdPerToken": 4.5e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "nvidia/nemotron-3-super-120b-a12b:free",
+    "name": "NVIDIA: Nemotron 3 Super (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 262144
+  },
+  {
+    "id": "nvidia/nemotron-3-ultra-550b-a55b",
+    "name": "NVIDIA: Nemotron 3 Ultra",
+    "promptUsdPerToken": 5e-7,
+    "completionUsdPerToken": 0.0000022,
+    "contextLength": 262144
+  },
+  {
+    "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "name": "NVIDIA: Nemotron 3 Ultra (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 1000000
+  },
+  {
+    "id": "nvidia/nemotron-3.5-content-safety",
+    "name": "NVIDIA: Nemotron 3.5 Content Safety",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "nvidia/nemotron-3.5-content-safety:free",
+    "name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 128000
+  },
+  {
+    "id": "nvidia/nemotron-3.5-lightning",
+    "name": "NVIDIA: Nemotron 3.5 Lightning",
+    "promptUsdPerToken": 6e-8,
+    "completionUsdPerToken": 1.6e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "nvidia/nemotron-3.5-lightning:free",
+    "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 1000000
+  },
+  {
+    "id": "openai/gpt-3.5-turbo",
+    "name": "OpenAI: GPT-3.5 Turbo",
+    "promptUsdPerToken": 5e-7,
+    "completionUsdPerToken": 0.0000015,
+    "contextLength": 16385
+  },
+  {
+    "id": "openai/gpt-3.5-turbo-0613",
+    "name": "OpenAI: GPT-3.5 Turbo (older v0613)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 4095
+  },
+  {
+    "id": "openai/gpt-3.5-turbo-16k",
+    "name": "OpenAI: GPT-3.5 Turbo 16k",
+    "promptUsdPerToken": 0.000003,
+    "completionUsdPerToken": 0.000004,
+    "contextLength": 16385
+  },
+  {
+    "id": "openai/gpt-3.5-turbo-instruct",
+    "name": "OpenAI: GPT-3.5 Turbo Instruct",
+    "promptUsdPerToken": 0.0000015,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 4095
+  },
+  {
+    "id": "openai/gpt-3.5-turbo:batch",
+    "name": "OpenAI: GPT-3.5 Turbo (batch)",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 7.5e-7,
+    "contextLength": 16385
+  },
+  {
+    "id": "openai/gpt-4",
+    "name": "OpenAI: GPT-4",
+    "promptUsdPerToken": 0.00003,
+    "completionUsdPerToken": 0.00006,
+    "contextLength": 8191
+  },
+  {
+    "id": "openai/gpt-4-turbo",
+    "name": "OpenAI: GPT-4 Turbo",
+    "promptUsdPerToken": 0.00001,
+    "completionUsdPerToken": 0.00003,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-4-turbo:batch",
+    "name": "OpenAI: GPT-4 Turbo (batch)",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.000015,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-4.1",
+    "name": "OpenAI: GPT-4.1",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000008,
+    "contextLength": 1047576
+  },
+  {
+    "id": "openai/gpt-4.1-mini",
+    "name": "OpenAI: GPT-4.1 Mini",
+    "promptUsdPerToken": 4e-7,
+    "completionUsdPerToken": 0.0000016,
+    "contextLength": 1047576
+  },
+  {
+    "id": "openai/gpt-4.1-mini:batch",
+    "name": "OpenAI: GPT-4.1 Mini (batch)",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 8e-7,
+    "contextLength": 1047576
+  },
+  {
+    "id": "openai/gpt-4.1-nano",
+    "name": "OpenAI: GPT-4.1 Nano",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 4e-7,
+    "contextLength": 1047576
+  },
+  {
+    "id": "openai/gpt-4.1-nano:batch",
+    "name": "OpenAI: GPT-4.1 Nano (batch)",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 1047576
+  },
+  {
+    "id": "openai/gpt-4.1:batch",
+    "name": "OpenAI: GPT-4.1 (batch)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000004,
+    "contextLength": 1047576
+  },
+  {
+    "id": "openai/gpt-4o",
+    "name": "OpenAI: GPT-4o",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-4o-2024-05-13",
+    "name": "OpenAI: GPT-4o (2024-05-13)",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.000015,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-4o-2024-08-06",
+    "name": "OpenAI: GPT-4o (2024-08-06)",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-4o-2024-11-20",
+    "name": "OpenAI: GPT-4o (2024-11-20)",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-4o-mini",
+    "name": "OpenAI: GPT-4o-mini",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 6e-7,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-4o-mini-2024-07-18",
+    "name": "OpenAI: GPT-4o-mini (2024-07-18)",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 6e-7,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-4o-mini:batch",
+    "name": "OpenAI: GPT-4o-mini (batch)",
+    "promptUsdPerToken": 7.5e-8,
+    "completionUsdPerToken": 3e-7,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-4o:batch",
+    "name": "OpenAI: GPT-4o (batch)",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-5",
+    "name": "OpenAI: GPT-5",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5-image",
+    "name": "OpenAI: GPT-5 Image",
+    "promptUsdPerToken": 0.00001,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5-image-mini",
+    "name": "OpenAI: GPT-5 Image Mini",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5-mini",
+    "name": "OpenAI: GPT-5 Mini",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5-mini:batch",
+    "name": "OpenAI: GPT-5 Mini (batch)",
+    "promptUsdPerToken": 1.25e-7,
+    "completionUsdPerToken": 0.000001,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5-nano",
+    "name": "OpenAI: GPT-5 Nano",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 4e-7,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5-nano:batch",
+    "name": "OpenAI: GPT-5 Nano (batch)",
+    "promptUsdPerToken": 2.5e-8,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5-pro",
+    "name": "OpenAI: GPT-5 Pro",
+    "promptUsdPerToken": 0.000015,
+    "completionUsdPerToken": 0.00012,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5-pro:batch",
+    "name": "OpenAI: GPT-5 Pro (batch)",
+    "promptUsdPerToken": 0.0000075,
+    "completionUsdPerToken": 0.00006,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.1",
+    "name": "OpenAI: GPT-5.1",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.1-codex",
+    "name": "OpenAI: GPT-5.1-Codex",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.1-codex-max",
+    "name": "OpenAI: GPT-5.1-Codex-Max",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.1-codex-mini",
+    "name": "OpenAI: GPT-5.1-Codex-Mini",
+    "promptUsdPerToken": 2.5e-7,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.1:batch",
+    "name": "OpenAI: GPT-5.1 (batch)",
+    "promptUsdPerToken": 6.25e-7,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.2",
+    "name": "OpenAI: GPT-5.2",
+    "promptUsdPerToken": 0.00000175,
+    "completionUsdPerToken": 0.000014,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.2-chat",
+    "name": "OpenAI: GPT-5.2 Chat",
+    "promptUsdPerToken": 0.00000175,
+    "completionUsdPerToken": 0.000014,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-5.2-codex",
+    "name": "OpenAI: GPT-5.2-Codex",
+    "promptUsdPerToken": 0.00000175,
+    "completionUsdPerToken": 0.000014,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.2-pro",
+    "name": "OpenAI: GPT-5.2 Pro",
+    "promptUsdPerToken": 0.000021,
+    "completionUsdPerToken": 0.000168,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.2-pro:batch",
+    "name": "OpenAI: GPT-5.2 Pro (batch)",
+    "promptUsdPerToken": 0.0000105,
+    "completionUsdPerToken": 0.000084,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.2:batch",
+    "name": "OpenAI: GPT-5.2 (batch)",
+    "promptUsdPerToken": 8.75e-7,
+    "completionUsdPerToken": 0.000007,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.3-codex",
+    "name": "OpenAI: GPT-5.3-Codex",
+    "promptUsdPerToken": 0.00000175,
+    "completionUsdPerToken": 0.000014,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.4",
+    "name": "OpenAI: GPT-5.4",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.000015,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.4-image-2",
+    "name": "OpenAI: GPT-5.4 Image 2",
+    "promptUsdPerToken": 0.000008,
+    "completionUsdPerToken": 0.000015,
+    "contextLength": 272000
+  },
+  {
+    "id": "openai/gpt-5.4-mini",
+    "name": "OpenAI: GPT-5.4 Mini",
+    "promptUsdPerToken": 7.5e-7,
+    "completionUsdPerToken": 0.0000045,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.4-mini:batch",
+    "name": "OpenAI: GPT-5.4 Mini (batch)",
+    "promptUsdPerToken": 3.75e-7,
+    "completionUsdPerToken": 0.00000225,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.4-nano",
+    "name": "OpenAI: GPT-5.4 Nano",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 0.00000125,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.4-nano:batch",
+    "name": "OpenAI: GPT-5.4 Nano (batch)",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 6.25e-7,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-5.4-pro",
+    "name": "OpenAI: GPT-5.4 Pro",
+    "promptUsdPerToken": 0.00003,
+    "completionUsdPerToken": 0.00018,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.4-pro:batch",
+    "name": "OpenAI: GPT-5.4 Pro (batch)",
+    "promptUsdPerToken": 0.000015,
+    "completionUsdPerToken": 0.00009,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.4:batch",
+    "name": "OpenAI: GPT-5.4 (batch)",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.0000075,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.5",
+    "name": "OpenAI: GPT-5.5",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.00003,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.5-pro",
+    "name": "OpenAI: GPT-5.5 Pro",
+    "promptUsdPerToken": 0.00003,
+    "completionUsdPerToken": 0.00018,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.5-pro:batch",
+    "name": "OpenAI: GPT-5.5 Pro (batch)",
+    "promptUsdPerToken": 0.000015,
+    "completionUsdPerToken": 0.00009,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.5:batch",
+    "name": "OpenAI: GPT-5.5 (batch)",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.000015,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.6-luna",
+    "name": "OpenAI: GPT-5.6 Luna",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 0.0000012,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.6-luna-pro",
+    "name": "OpenAI: GPT-5.6 Luna Pro",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 0.0000012,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.6-luna-pro:batch",
+    "name": "OpenAI: GPT-5.6 Luna Pro (batch)",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 6e-7,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.6-luna:batch",
+    "name": "OpenAI: GPT-5.6 Luna (batch)",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 6e-7,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.6-sol",
+    "name": "OpenAI: GPT-5.6 Sol",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.6-sol-pro",
+    "name": "OpenAI: GPT-5.6 Sol Pro",
+    "promptUsdPerToken": 0.000004,
+    "completionUsdPerToken": 0.00002,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.6-sol-pro:batch",
+    "name": "OpenAI: GPT-5.6 Sol Pro (batch)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.6-sol:batch",
+    "name": "OpenAI: GPT-5.6 Sol (batch)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.6-terra",
+    "name": "OpenAI: GPT-5.6 Terra",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000012,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.6-terra-pro",
+    "name": "OpenAI: GPT-5.6 Terra Pro",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000012,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.6-terra-pro:batch",
+    "name": "OpenAI: GPT-5.6 Terra Pro (batch)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5.6-terra:batch",
+    "name": "OpenAI: GPT-5.6 Terra (batch)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-5:batch",
+    "name": "OpenAI: GPT-5 (batch)",
+    "promptUsdPerToken": 6.25e-7,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-6-astra",
+    "name": "OpenAI: GPT-6 Astra",
+    "promptUsdPerToken": 0.00001,
+    "completionUsdPerToken": 0.00005,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6-astra-pro",
+    "name": "OpenAI: GPT-6 Astra Pro",
+    "promptUsdPerToken": 0.00001,
+    "completionUsdPerToken": 0.00005,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6-astra-pro:batch",
+    "name": "OpenAI: GPT-6 Astra Pro (batch)",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.000025,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6-astra:batch",
+    "name": "OpenAI: GPT-6 Astra (batch)",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.000025,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6-luna",
+    "name": "OpenAI: GPT-6 Luna",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 5e-7,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6-luna-pro",
+    "name": "OpenAI: GPT-6 Luna Pro",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 5e-7,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6-luna-pro:batch",
+    "name": "OpenAI: GPT-6 Luna Pro (batch)",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 2.5e-7,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6-luna:batch",
+    "name": "OpenAI: GPT-6 Luna (batch)",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 2.5e-7,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6-sol",
+    "name": "OpenAI: GPT-6 Sol",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6-sol-pro",
+    "name": "OpenAI: GPT-6 Sol Pro",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6-sol-pro:batch",
+    "name": "OpenAI: GPT-6 Sol Pro (batch)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6-sol:batch",
+    "name": "OpenAI: GPT-6 Sol (batch)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6.1-sol",
+    "name": "OpenAI: GPT-6.1 Sol",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-6.1-sol-pro",
+    "name": "OpenAI: GPT-6.1 Sol Pro",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 1050000
+  },
+  {
+    "id": "openai/gpt-audio",
+    "name": "OpenAI: GPT Audio",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-audio-mini",
+    "name": "OpenAI: GPT Audio Mini",
+    "promptUsdPerToken": 6e-7,
+    "completionUsdPerToken": 0.0000024,
+    "contextLength": 128000
+  },
+  {
+    "id": "openai/gpt-chat-latest",
+    "name": "OpenAI: GPT Chat Latest",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.00003,
+    "contextLength": 400000
+  },
+  {
+    "id": "openai/gpt-oss-120b",
+    "name": "OpenAI: gpt-oss-120b",
+    "promptUsdPerToken": 3.7e-8,
+    "completionUsdPerToken": 1.7e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "openai/gpt-oss-120b:batch",
+    "name": "OpenAI: gpt-oss-120b (batch)",
+    "promptUsdPerToken": 2.96e-8,
+    "completionUsdPerToken": 1.36e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "openai/gpt-oss-20b",
+    "name": "OpenAI: gpt-oss-20b",
+    "promptUsdPerToken": 1.8e-8,
+    "completionUsdPerToken": 9e-8,
+    "contextLength": 131072
+  },
+  {
+    "id": "openai/gpt-oss-20b:batch",
+    "name": "OpenAI: gpt-oss-20b (batch)",
+    "promptUsdPerToken": 2.4e-8,
+    "completionUsdPerToken": 1.12e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "openai/gpt-oss-safeguard-20b",
+    "name": "OpenAI: gpt-oss-safeguard-20b",
+    "promptUsdPerToken": 7.5e-8,
+    "completionUsdPerToken": 3e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "openai/o1",
+    "name": "OpenAI: o1",
+    "promptUsdPerToken": 0.000015,
+    "completionUsdPerToken": 0.00006,
+    "contextLength": 200000
+  },
+  {
+    "id": "openai/o1-pro",
+    "name": "OpenAI: o1-pro",
+    "promptUsdPerToken": 0.00015,
+    "completionUsdPerToken": 0.0006,
+    "contextLength": 200000
+  },
+  {
+    "id": "openai/o3",
+    "name": "OpenAI: o3",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000008,
+    "contextLength": 200000
+  },
+  {
+    "id": "openai/o3-mini",
+    "name": "OpenAI: o3 Mini",
+    "promptUsdPerToken": 0.0000011,
+    "completionUsdPerToken": 0.0000044,
+    "contextLength": 200000
+  },
+  {
+    "id": "openai/o3-mini-high",
+    "name": "OpenAI: o3 Mini High",
+    "promptUsdPerToken": 0.0000011,
+    "completionUsdPerToken": 0.0000044,
+    "contextLength": 200000
+  },
+  {
+    "id": "openai/o3-mini:batch",
+    "name": "OpenAI: o3 Mini (batch)",
+    "promptUsdPerToken": 5.5e-7,
+    "completionUsdPerToken": 0.0000022,
+    "contextLength": 200000
+  },
+  {
+    "id": "openai/o3-pro",
+    "name": "OpenAI: o3 Pro",
+    "promptUsdPerToken": 0.00002,
+    "completionUsdPerToken": 0.00008,
+    "contextLength": 200000
+  },
+  {
+    "id": "openai/o3:batch",
+    "name": "OpenAI: o3 (batch)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000004,
+    "contextLength": 200000
+  },
+  {
+    "id": "openai/o4-mini",
+    "name": "OpenAI: o4 Mini",
+    "promptUsdPerToken": 0.0000011,
+    "completionUsdPerToken": 0.0000044,
+    "contextLength": 200000
+  },
+  {
+    "id": "openai/o4-mini-high",
+    "name": "OpenAI: o4 Mini High",
+    "promptUsdPerToken": 0.0000011,
+    "completionUsdPerToken": 0.0000044,
+    "contextLength": 200000
+  },
+  {
+    "id": "openai/o4-mini:batch",
+    "name": "OpenAI: o4 Mini (batch)",
+    "promptUsdPerToken": 5.5e-7,
+    "completionUsdPerToken": 0.0000022,
+    "contextLength": 200000
+  },
+  {
+    "id": "openrouter/free",
+    "name": "Free Models Router",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 200000
+  },
+  {
+    "id": "perceptron/perceptron-mk1",
+    "name": "Perceptron: Perceptron Mk1",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 0.0000015,
+    "contextLength": 32768
+  },
+  {
+    "id": "perceptron/perceptron-mk1.5",
+    "name": "Perceptron: Perceptron Mk1.5",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 0.0000015,
+    "contextLength": 36864
+  },
+  {
+    "id": "perplexity/sonar",
+    "name": "Perplexity: Sonar",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000001,
+    "contextLength": 127072
+  },
+  {
+    "id": "perplexity/sonar-deep-research",
+    "name": "Perplexity: Sonar Deep Research",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000008,
+    "contextLength": 128000
+  },
+  {
+    "id": "perplexity/sonar-pro",
+    "name": "Perplexity: Sonar Pro",
+    "promptUsdPerToken": 0.000003,
+    "completionUsdPerToken": 0.000015,
+    "contextLength": 200000
+  },
+  {
+    "id": "perplexity/sonar-pro-search",
+    "name": "Perplexity: Sonar Pro Search",
+    "promptUsdPerToken": 0.000003,
+    "completionUsdPerToken": 0.000015,
+    "contextLength": 200000
+  },
+  {
+    "id": "perplexity/sonar-reasoning-pro",
+    "name": "Perplexity: Sonar Reasoning Pro",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000008,
+    "contextLength": 128000
+  },
+  {
+    "id": "poolside/laguna-s-2.1",
+    "name": "Poolside: Laguna S 2.1",
+    "promptUsdPerToken": 9e-8,
+    "completionUsdPerToken": 1.8e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "poolside/laguna-s-2.1:free",
+    "name": "Poolside: Laguna S 2.1 (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 262144
+  },
+  {
+    "id": "poolside/laguna-xs-2.1",
+    "name": "Poolside: Laguna XS 2.1",
+    "promptUsdPerToken": 6e-8,
+    "completionUsdPerToken": 1.2e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "poolside/laguna-xs-2.1:free",
+    "name": "Poolside: Laguna XS 2.1 (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 262144
+  },
+  {
+    "id": "prism-ml/ternary-bonsai-2-27b",
+    "name": "PrismML: Ternary Bonsai 2 27B",
+    "promptUsdPerToken": 7.5e-8,
+    "completionUsdPerToken": 5e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen-2.5-72b-instruct",
+    "name": "Qwen2.5 72B Instruct",
+    "promptUsdPerToken": 3.6e-7,
+    "completionUsdPerToken": 4e-7,
+    "contextLength": 32768
+  },
+  {
+    "id": "qwen/qwen-2.5-7b-instruct",
+    "name": "Qwen: Qwen2.5 7B Instruct",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 32768
+  },
+  {
+    "id": "qwen/qwen-2.5-coder-32b-instruct",
+    "name": "Qwen2.5 Coder 32B Instruct",
+    "promptUsdPerToken": 6.6e-7,
+    "completionUsdPerToken": 0.000001,
+    "contextLength": 32768
+  },
+  {
+    "id": "qwen/qwen-plus",
+    "name": "Qwen: Qwen-Plus",
+    "promptUsdPerToken": 2.6e-7,
+    "completionUsdPerToken": 7.8e-7,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen-plus-2025-07-28",
+    "name": "Qwen: Qwen Plus 0728",
+    "promptUsdPerToken": 2.6e-7,
+    "completionUsdPerToken": 7.8e-7,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen2.5-vl-72b-instruct",
+    "name": "Qwen: Qwen2.5 VL 72B Instruct",
+    "promptUsdPerToken": 8e-7,
+    "completionUsdPerToken": 0.000001,
+    "contextLength": 128000
+  },
+  {
+    "id": "qwen/qwen3-14b",
+    "name": "Qwen: Qwen3 14B",
+    "promptUsdPerToken": 1.2e-7,
+    "completionUsdPerToken": 2.4e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "qwen/qwen3-235b-a22b",
+    "name": "Qwen: Qwen3 235B A22B",
+    "promptUsdPerToken": 4.55e-7,
+    "completionUsdPerToken": 0.00000182,
+    "contextLength": 131072
+  },
+  {
+    "id": "qwen/qwen3-235b-a22b-2507",
+    "name": "Qwen: Qwen3 235B A22B Instruct 2507",
+    "promptUsdPerToken": 8.75e-8,
+    "completionUsdPerToken": 3.5e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-235b-a22b-thinking-2507",
+    "name": "Qwen: Qwen3 235B A22B Thinking 2507",
+    "promptUsdPerToken": 2.3e-7,
+    "completionUsdPerToken": 0.0000023,
+    "contextLength": 131072
+  },
+  {
+    "id": "qwen/qwen3-30b-a3b",
+    "name": "Qwen: Qwen3 30B A3B",
+    "promptUsdPerToken": 1.2e-7,
+    "completionUsdPerToken": 5e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "qwen/qwen3-30b-a3b-instruct-2507",
+    "name": "Qwen: Qwen3 30B A3B Instruct 2507",
+    "promptUsdPerToken": 4.815e-8,
+    "completionUsdPerToken": 1.9305e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-30b-a3b-thinking-2507",
+    "name": "Qwen: Qwen3 30B A3B Thinking 2507",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 0.0000024,
+    "contextLength": 81920
+  },
+  {
+    "id": "qwen/qwen3-32b",
+    "name": "Qwen: Qwen3 32B",
+    "promptUsdPerToken": 8e-8,
+    "completionUsdPerToken": 2.8e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "qwen/qwen3-8b",
+    "name": "Qwen: Qwen3 8B",
+    "promptUsdPerToken": 1.17e-7,
+    "completionUsdPerToken": 4.55e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "qwen/qwen3-coder",
+    "name": "Qwen: Qwen3 Coder 480B A35B",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.000001,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-coder-30b-a3b-instruct",
+    "name": "Qwen: Qwen3 Coder 30B A3B Instruct",
+    "promptUsdPerToken": 7e-8,
+    "completionUsdPerToken": 2.8e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-coder-flash",
+    "name": "Qwen: Qwen3 Coder Flash",
+    "promptUsdPerToken": 1.95e-7,
+    "completionUsdPerToken": 9.75e-7,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3-coder-next",
+    "name": "Qwen: Qwen3 Coder Next",
+    "promptUsdPerToken": 1.2e-7,
+    "completionUsdPerToken": 8e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-coder-plus",
+    "name": "Qwen: Qwen3 Coder Plus",
+    "promptUsdPerToken": 6.5e-7,
+    "completionUsdPerToken": 0.00000325,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3-max",
+    "name": "Qwen: Qwen3 Max",
+    "promptUsdPerToken": 7.8e-7,
+    "completionUsdPerToken": 0.0000039,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-max-thinking",
+    "name": "Qwen: Qwen3 Max Thinking",
+    "promptUsdPerToken": 7.8e-7,
+    "completionUsdPerToken": 0.0000039,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-next-80b-a3b-instruct",
+    "name": "Qwen: Qwen3 Next 80B A3B Instruct",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 0.0000011,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-next-80b-a3b-thinking",
+    "name": "Qwen: Qwen3 Next 80B A3B Thinking",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 0.0000012,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-vl-235b-a22b-instruct",
+    "name": "Qwen: Qwen3 VL 235B A22B Instruct",
+    "promptUsdPerToken": 2.1e-7,
+    "completionUsdPerToken": 0.0000019,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-vl-235b-a22b-thinking",
+    "name": "Qwen: Qwen3 VL 235B A22B Thinking",
+    "promptUsdPerToken": 4e-7,
+    "completionUsdPerToken": 0.000004,
+    "contextLength": 131072
+  },
+  {
+    "id": "qwen/qwen3-vl-30b-a3b-instruct",
+    "name": "Qwen: Qwen3 VL 30B A3B Instruct",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 6e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-vl-30b-a3b-thinking",
+    "name": "Qwen: Qwen3 VL 30B A3B Thinking",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 0.0000024,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-vl-32b-instruct",
+    "name": "Qwen: Qwen3 VL 32B Instruct",
+    "promptUsdPerToken": 1.04e-7,
+    "completionUsdPerToken": 4.16e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "qwen/qwen3-vl-8b-instruct",
+    "name": "Qwen: Qwen3 VL 8B Instruct",
+    "promptUsdPerToken": 1.17e-7,
+    "completionUsdPerToken": 4.55e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3-vl-8b-thinking",
+    "name": "Qwen: Qwen3 VL 8B Thinking",
+    "promptUsdPerToken": 1.8e-7,
+    "completionUsdPerToken": 0.0000021,
+    "contextLength": 131072
+  },
+  {
+    "id": "qwen/qwen3.5-122b-a10b",
+    "name": "Qwen: Qwen3.5-122B-A10B",
+    "promptUsdPerToken": 2.6e-7,
+    "completionUsdPerToken": 0.00000208,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3.5-27b",
+    "name": "Qwen: Qwen3.5-27B",
+    "promptUsdPerToken": 1.95e-7,
+    "completionUsdPerToken": 0.00000156,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3.5-35b-a3b",
+    "name": "Qwen: Qwen3.5-35B-A3B",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 0.000001,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3.5-397b-a17b",
+    "name": "Qwen: Qwen3.5 397B A17B",
+    "promptUsdPerToken": 5.5e-7,
+    "completionUsdPerToken": 0.0000035,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3.5-9b",
+    "name": "Qwen: Qwen3.5-9B",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 1.5e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3.5-flash-02-23",
+    "name": "Qwen: Qwen3.5-Flash",
+    "promptUsdPerToken": 6.5e-8,
+    "completionUsdPerToken": 2.6e-7,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3.5-plus-02-15",
+    "name": "Qwen: Qwen3.5 Plus 2026-02-15",
+    "promptUsdPerToken": 2.6e-7,
+    "completionUsdPerToken": 0.00000156,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3.5-plus-20260420",
+    "name": "Qwen: Qwen3.5 Plus 2026-04-20",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 0.0000018,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3.6-27b",
+    "name": "Qwen: Qwen3.6 27B",
+    "promptUsdPerToken": 3.2e-7,
+    "completionUsdPerToken": 0.0000032,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3.6-35b-a3b",
+    "name": "Qwen: Qwen3.6 35B A3B",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 0.000001,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3.6-flash",
+    "name": "Qwen: Qwen3.6 Flash",
+    "promptUsdPerToken": 1.875e-7,
+    "completionUsdPerToken": 0.000001125,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3.6-max-preview",
+    "name": "Qwen: Qwen3.6 Max Preview",
+    "promptUsdPerToken": 0.000001027,
+    "completionUsdPerToken": 0.000006162,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3.6-plus",
+    "name": "Qwen: Qwen3.6 Plus",
+    "promptUsdPerToken": 3.25e-7,
+    "completionUsdPerToken": 0.00000195,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3.7-flash",
+    "name": "Qwen: Qwen3.7 Flash",
+    "promptUsdPerToken": 3e-8,
+    "completionUsdPerToken": 1.3e-7,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3.7-max",
+    "name": "Qwen: Qwen3.7 Max",
+    "promptUsdPerToken": 0.000001475,
+    "completionUsdPerToken": 0.000004425,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3.7-plus",
+    "name": "Qwen: Qwen3.7 Plus",
+    "promptUsdPerToken": 3.2e-7,
+    "completionUsdPerToken": 0.00000128,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3.8-2.4t-a95b",
+    "name": "Qwen: Qwen3.8 2.4T A95B",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 1048576
+  },
+  {
+    "id": "qwen/qwen3.8-27b",
+    "name": "Qwen: Qwen3.8 27B",
+    "promptUsdPerToken": 4.2e-7,
+    "completionUsdPerToken": 0.000003,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3.8-27b:free",
+    "name": "Qwen: Qwen3.8 27B (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 262144
+  },
+  {
+    "id": "qwen/qwen3.8-flash",
+    "name": "Qwen: Qwen3.8 Flash",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 4.7e-7,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3.8-max-0902",
+    "name": "Qwen: Qwen3.8 Max (0902)",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3.8-max-prime",
+    "name": "Qwen: Qwen3.8 Max Prime",
+    "promptUsdPerToken": 0.000004,
+    "completionUsdPerToken": 0.000012,
+    "contextLength": 1000000
+  },
+  {
+    "id": "qwen/qwen3.8-omni-flash",
+    "name": "Qwen: Qwen3.8 Omni Flash",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 4.7e-7,
+    "contextLength": 1000000
+  },
+  {
+    "id": "rekaai/reka-edge",
+    "name": "Reka Edge",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 1e-7,
+    "contextLength": 16384
+  },
+  {
+    "id": "rekaai/reka-flash-3",
+    "name": "Reka Flash 3",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 65536
+  },
+  {
+    "id": "relace/relace-apply-3",
+    "name": "Relace: Relace Apply 3",
+    "promptUsdPerToken": 8.5e-7,
+    "completionUsdPerToken": 0.00000125,
+    "contextLength": 256000
+  },
+  {
+    "id": "relace/relace-search",
+    "name": "Relace: Relace Search",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000003,
+    "contextLength": 256000
+  },
+  {
+    "id": "sakana/fugu-max",
+    "name": "Sakana: Fugu Max",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 1000000
+  },
+  {
+    "id": "sakana/fugu-ultra",
+    "name": "Sakana: Fugu Ultra",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.00003,
+    "contextLength": 1000000
+  },
+  {
+    "id": "sakana/fugu-ultra-v2",
+    "name": "Sakana: Fugu Ultra v2",
+    "promptUsdPerToken": 0.000005,
+    "completionUsdPerToken": 0.00003,
+    "contextLength": 1000000
+  },
+  {
+    "id": "sakana/sakana-namazu",
+    "name": "Sakana: Sakana Namazu",
+    "promptUsdPerToken": 9.5e-7,
+    "completionUsdPerToken": 0.000004,
+    "contextLength": 262144
+  },
+  {
+    "id": "sao10k/l3-lunaris-8b",
+    "name": "Sao10K: Llama 3 8B Lunaris",
+    "promptUsdPerToken": 4e-8,
+    "completionUsdPerToken": 5e-8,
+    "contextLength": 8192
+  },
+  {
+    "id": "sao10k/l3.1-euryale-70b",
+    "name": "Sao10K: Llama 3.1 Euryale 70B v2.2",
+    "promptUsdPerToken": 8.5e-7,
+    "completionUsdPerToken": 8.5e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "sao10k/l3.3-euryale-70b",
+    "name": "Sao10K: Llama 3.3 Euryale 70B",
+    "promptUsdPerToken": 6.5e-7,
+    "completionUsdPerToken": 7.5e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "stealth/space-bunny-alpha",
+    "name": "Space Bunny Alpha",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 1000000
+  },
+  {
+    "id": "stepfun/step-3.5-flash",
+    "name": "StepFun: Step 3.5 Flash",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 3e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "stepfun/step-3.7-flash",
+    "name": "StepFun: Step 3.7 Flash",
+    "promptUsdPerToken": 2e-7,
+    "completionUsdPerToken": 0.00000115,
+    "contextLength": 262144
+  },
+  {
+    "id": "tencent/hunyuan-a13b-instruct",
+    "name": "Tencent: Hunyuan A13B Instruct",
+    "promptUsdPerToken": 1.4e-7,
+    "completionUsdPerToken": 5.7e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "tencent/hy-mt2-1.8b",
+    "name": "Tencent: Hy-MT2-1.8B",
+    "promptUsdPerToken": 4.4e-8,
+    "completionUsdPerToken": 1.77e-7,
+    "contextLength": 8192
+  },
+  {
+    "id": "tencent/hy-mt2-30b-a3b",
+    "name": "Tencent: Hy-MT2-30B-A3B",
+    "promptUsdPerToken": 7.4e-8,
+    "completionUsdPerToken": 2.95e-7,
+    "contextLength": 8192
+  },
+  {
+    "id": "tencent/hy-mt2-7b",
+    "name": "Tencent: Hy-MT2-7B",
+    "promptUsdPerToken": 7.4e-8,
+    "completionUsdPerToken": 2.95e-7,
+    "contextLength": 8192
+  },
+  {
+    "id": "tencent/hy3",
+    "name": "Tencent: Hy3",
+    "promptUsdPerToken": 8.25e-8,
+    "completionUsdPerToken": 3.3e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "tencent/hy3-preview",
+    "name": "Tencent: Hy3 preview",
+    "promptUsdPerToken": 1.8e-7,
+    "completionUsdPerToken": 6e-7,
+    "contextLength": 262144
+  },
+  {
+    "id": "tencent/hy4-preview",
+    "name": "Tencent: Hy4 preview",
+    "promptUsdPerToken": 7.506e-7,
+    "completionUsdPerToken": 0.0000022509,
+    "contextLength": 1048576
+  },
+  {
+    "id": "thedrummer/cydonia-24b-v4.1",
+    "name": "TheDrummer: Cydonia 24B V4.1",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 5e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "thedrummer/skyfall-36b-v2",
+    "name": "TheDrummer: Skyfall 36B V2",
+    "promptUsdPerToken": 5.5e-7,
+    "completionUsdPerToken": 8e-7,
+    "contextLength": 32768
+  },
+  {
+    "id": "thedrummer/unslopnemo-12b",
+    "name": "TheDrummer: UnslopNemo 12B",
+    "promptUsdPerToken": 4e-7,
+    "completionUsdPerToken": 4e-7,
+    "contextLength": 1024000
+  },
+  {
+    "id": "thinkingmachines/inkling",
+    "name": "Thinking Machines: Inkling",
+    "promptUsdPerToken": 9.5e-7,
+    "completionUsdPerToken": 0.00000405,
+    "contextLength": 524288
+  },
+  {
+    "id": "thinkingmachines/inkling-small",
+    "name": "Thinking Machines: Inkling Small",
+    "promptUsdPerToken": 4.5e-7,
+    "completionUsdPerToken": 0.0000012,
+    "contextLength": 524288
+  },
+  {
+    "id": "thinkingmachines/inkling-small:free",
+    "name": "Thinking Machines: Inkling Small (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 1048576
+  },
+  {
+    "id": "thinkingmachines/inkling:free",
+    "name": "Thinking Machines: Inkling (free)",
+    "promptUsdPerToken": 0,
+    "completionUsdPerToken": 0,
+    "contextLength": 1048576
+  },
+  {
+    "id": "unbiased/pareto",
+    "name": "Pareto",
+    "promptUsdPerToken": 0.0000025,
+    "completionUsdPerToken": 0.0000075,
+    "contextLength": 262144
+  },
+  {
+    "id": "unbiased/pareto-26.10-preview",
+    "name": "Pareto 26.10 Preview",
+    "promptUsdPerToken": 8e-7,
+    "completionUsdPerToken": 0.0000032,
+    "contextLength": 1048576
+  },
+  {
+    "id": "undi95/remm-slerp-l2-13b",
+    "name": "ReMM SLERP 13B",
+    "promptUsdPerToken": 3.5e-7,
+    "completionUsdPerToken": 6.5e-7,
+    "contextLength": 6144
+  },
+  {
+    "id": "upstage/solar-mini4",
+    "name": "Upstage: Solar Mini 4",
+    "promptUsdPerToken": 5e-8,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 524288
+  },
+  {
+    "id": "upstage/solar-pro-3",
+    "name": "Upstage: Solar Pro 3",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 6e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "upstage/solar-pro4",
+    "name": "Upstage: Solar Pro 4",
+    "promptUsdPerToken": 9e-8,
+    "completionUsdPerToken": 3.6e-7,
+    "contextLength": 524288
+  },
+  {
+    "id": "writer/palmyra-x5",
+    "name": "Writer: Palmyra X5",
+    "promptUsdPerToken": 6e-7,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 1040000
+  },
+  {
+    "id": "x-ai/grok-4.20",
+    "name": "SpaceXAI: Grok 4.20",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.0000025,
+    "contextLength": 2000000
+  },
+  {
+    "id": "x-ai/grok-4.20-multi-agent",
+    "name": "SpaceXAI: Grok 4.20 Multi-Agent",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.0000025,
+    "contextLength": 2000000
+  },
+  {
+    "id": "x-ai/grok-4.3",
+    "name": "SpaceXAI: Grok 4.3",
+    "promptUsdPerToken": 0.00000125,
+    "completionUsdPerToken": 0.0000025,
+    "contextLength": 1000000
+  },
+  {
+    "id": "x-ai/grok-4.3:batch",
+    "name": "SpaceXAI: Grok 4.3 (batch)",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 1000000
+  },
+  {
+    "id": "x-ai/grok-4.5",
+    "name": "SpaceXAI: Grok 4.5",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 500000
+  },
+  {
+    "id": "x-ai/grok-4.6",
+    "name": "SpaceXAI: Grok 4.6",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 500000
+  },
+  {
+    "id": "x-ai/grok-4.7",
+    "name": "SpaceXAI: Grok 4.7",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 500000
+  },
+  {
+    "id": "x-ai/grok-build-0.1",
+    "name": "SpaceXAI: Grok Build 0.1",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 256000
+  },
+  {
+    "id": "xiaomi/mimo-v2.5",
+    "name": "Xiaomi: MiMo-V2.5",
+    "promptUsdPerToken": 1.4e-7,
+    "completionUsdPerToken": 2.8e-7,
+    "contextLength": 1050000
+  },
+  {
+    "id": "xiaomi/mimo-v2.5-pro",
+    "name": "Xiaomi: MiMo-V2.5-Pro",
+    "promptUsdPerToken": 4.35e-7,
+    "completionUsdPerToken": 8.7e-7,
+    "contextLength": 1050000
+  },
+  {
+    "id": "xiaomi/mimo-v2.6-flash",
+    "name": "Xiaomi: MiMo-V2.6-Flash",
+    "promptUsdPerToken": 1.4e-7,
+    "completionUsdPerToken": 2.8e-7,
+    "contextLength": 1050000
+  },
+  {
+    "id": "xiaomi/mimo-v2.6-pro",
+    "name": "Xiaomi: MiMo-V2.6-Pro",
+    "promptUsdPerToken": 4.35e-7,
+    "completionUsdPerToken": 8.7e-7,
+    "contextLength": 1050000
+  },
+  {
+    "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
+    "name": "Xiaomi: MiMo-V2.6-Pro-UltraSpeed",
+    "promptUsdPerToken": 0.00000435,
+    "completionUsdPerToken": 0.0000087,
+    "contextLength": 1048576
+  },
+  {
+    "id": "z-ai/glm-4.5",
+    "name": "Z.ai: GLM 4.5",
+    "promptUsdPerToken": 6e-7,
+    "completionUsdPerToken": 0.0000022,
+    "contextLength": 131072
+  },
+  {
+    "id": "z-ai/glm-4.5-air",
+    "name": "Z.ai: GLM 4.5 Air",
+    "promptUsdPerToken": 1.3e-7,
+    "completionUsdPerToken": 8.5e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "z-ai/glm-4.5v",
+    "name": "Z.ai: GLM 4.5V",
+    "promptUsdPerToken": 6e-7,
+    "completionUsdPerToken": 0.0000018,
+    "contextLength": 65536
+  },
+  {
+    "id": "z-ai/glm-4.6",
+    "name": "Z.ai: GLM 4.6",
+    "promptUsdPerToken": 4.3e-7,
+    "completionUsdPerToken": 0.00000175,
+    "contextLength": 204800
+  },
+  {
+    "id": "z-ai/glm-4.6v",
+    "name": "Z.ai: GLM 4.6V",
+    "promptUsdPerToken": 3e-7,
+    "completionUsdPerToken": 9e-7,
+    "contextLength": 131072
+  },
+  {
+    "id": "z-ai/glm-4.7",
+    "name": "Z.ai: GLM 4.7",
+    "promptUsdPerToken": 6e-7,
+    "completionUsdPerToken": 0.0000022,
+    "contextLength": 204800
+  },
+  {
+    "id": "z-ai/glm-4.7-flash",
+    "name": "Z.ai: GLM 4.7 Flash",
+    "promptUsdPerToken": 6.05e-8,
+    "completionUsdPerToken": 4e-7,
+    "contextLength": 200000
+  },
+  {
+    "id": "z-ai/glm-5",
+    "name": "Z.ai: GLM 5",
+    "promptUsdPerToken": 6e-7,
+    "completionUsdPerToken": 0.00000192,
+    "contextLength": 204800
+  },
+  {
+    "id": "z-ai/glm-5-turbo",
+    "name": "Z.ai: GLM 5 Turbo",
+    "promptUsdPerToken": 0.0000012,
+    "completionUsdPerToken": 0.000004,
+    "contextLength": 202752
+  },
+  {
+    "id": "z-ai/glm-5.1",
+    "name": "Z.ai: GLM 5.1",
+    "promptUsdPerToken": 9.646e-7,
+    "completionUsdPerToken": 0.0000030316,
+    "contextLength": 204800
+  },
+  {
+    "id": "z-ai/glm-5.2",
+    "name": "Z.ai: GLM 5.2",
+    "promptUsdPerToken": 4.1e-7,
+    "completionUsdPerToken": 0.00000399,
+    "contextLength": 1048576
+  },
+  {
+    "id": "z-ai/glm-5.3",
+    "name": "Z.ai: GLM 5.3",
+    "promptUsdPerToken": 0.0000014,
+    "completionUsdPerToken": 0.0000044,
+    "contextLength": 1048576
+  },
+  {
+    "id": "z-ai/glm-5.3-flash",
+    "name": "Z.ai: GLM 5.3 Flash",
+    "promptUsdPerToken": 1.5e-7,
+    "completionUsdPerToken": 5e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "z-ai/glm-5.3-flash:batch",
+    "name": "Z.ai: GLM 5.3 Flash (batch)",
+    "promptUsdPerToken": 6e-8,
+    "completionUsdPerToken": 2e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "z-ai/glm-5.3-flashx",
+    "name": "Z.ai: GLM 5.3 FlashX",
+    "promptUsdPerToken": 3.7e-7,
+    "completionUsdPerToken": 0.00000125,
+    "contextLength": 1048576
+  },
+  {
+    "id": "z-ai/glm-5.3-prime",
+    "name": "Z.ai: GLM 5.3 Prime",
+    "promptUsdPerToken": 0.0000028,
+    "completionUsdPerToken": 0.0000088,
+    "contextLength": 1000000
+  },
+  {
+    "id": "z-ai/glm-5.3:batch",
+    "name": "Z.ai: GLM 5.3 (batch)",
+    "promptUsdPerToken": 4.5e-7,
+    "completionUsdPerToken": 0.000002,
+    "contextLength": 1048576
+  },
+  {
+    "id": "z-ai/glm-5v-turbo",
+    "name": "Z.ai: GLM 5V Turbo",
+    "promptUsdPerToken": 0.0000012,
+    "completionUsdPerToken": 0.000004,
+    "contextLength": 202752
+  },
+  {
+    "id": "~anthropic/claude-fable-latest",
+    "name": "Anthropic: Claude Fable Latest",
+    "promptUsdPerToken": 0.00001,
+    "completionUsdPerToken": 0.00005,
+    "contextLength": 1000000
+  },
+  {
+    "id": "~anthropic/claude-haiku-latest",
+    "name": "Anthropic: Claude Haiku Latest",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000005,
+    "contextLength": 200000
+  },
+  {
+    "id": "~anthropic/claude-opus-latest",
+    "name": "Anthropic: Claude Opus Latest",
+    "promptUsdPerToken": 0.000004,
+    "completionUsdPerToken": 0.00002,
+    "contextLength": 1000000
+  },
+  {
+    "id": "~anthropic/claude-sonnet-latest",
+    "name": "Anthropic: Claude Sonnet Latest",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 1000000
+  },
+  {
+    "id": "~deepseek/deepseek-flash-latest",
+    "name": "DeepSeek: DeepSeek Flash Latest",
+    "promptUsdPerToken": 2e-8,
+    "completionUsdPerToken": 6e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "~deepseek/deepseek-pro-latest",
+    "name": "DeepSeek: DeepSeek Pro Latest",
+    "promptUsdPerToken": 1.32e-7,
+    "completionUsdPerToken": 3.96e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "~deepseek/deepseek-v4-flash-latest",
+    "name": "DeepSeek: DeepSeek V4 Flash Latest",
+    "promptUsdPerToken": 1.2825e-8,
+    "completionUsdPerToken": 6.02574e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "~google/gemini-flash-latest",
+    "name": "Google: Gemini Flash Latest",
+    "promptUsdPerToken": 7.5e-7,
+    "completionUsdPerToken": 0.00000375,
+    "contextLength": 1048576
+  },
+  {
+    "id": "~google/gemini-pro-latest",
+    "name": "Google: Gemini Pro Latest",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000012,
+    "contextLength": 1048576
+  },
+  {
+    "id": "~moonshotai/kimi-latest",
+    "name": "MoonshotAI: Kimi Latest",
+    "promptUsdPerToken": 0.000001,
+    "completionUsdPerToken": 0.000011357,
+    "contextLength": 1048576
+  },
+  {
+    "id": "~openai/gpt-astra-latest",
+    "name": "OpenAI: GPT Astra Latest",
+    "promptUsdPerToken": 0.00001,
+    "completionUsdPerToken": 0.00005,
+    "contextLength": 1050000
+  },
+  {
+    "id": "~openai/gpt-luna-latest",
+    "name": "OpenAI: GPT Luna Latest",
+    "promptUsdPerToken": 1e-7,
+    "completionUsdPerToken": 5e-7,
+    "contextLength": 1050000
+  },
+  {
+    "id": "~openai/gpt-mini-latest",
+    "name": "OpenAI: GPT Mini Latest",
+    "promptUsdPerToken": 7.5e-7,
+    "completionUsdPerToken": 0.0000045,
+    "contextLength": 400000
+  },
+  {
+    "id": "~openai/gpt-sol-latest",
+    "name": "OpenAI: GPT Sol Latest",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.00001,
+    "contextLength": 1050000
+  },
+  {
+    "id": "~openai/gpt-terra-latest",
+    "name": "OpenAI: GPT Terra Latest",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000012,
+    "contextLength": 1050000
+  },
+  {
+    "id": "~x-ai/grok-latest",
+    "name": "xAI: Grok Latest",
+    "promptUsdPerToken": 0.000002,
+    "completionUsdPerToken": 0.000006,
+    "contextLength": 500000
+  },
+  {
+    "id": "~z-ai/glm-flash-latest",
+    "name": "Z.ai: GLM Flash Latest",
+    "promptUsdPerToken": 2.625e-8,
+    "completionUsdPerToken": 9.28749e-7,
+    "contextLength": 1048576
+  },
+  {
+    "id": "~z-ai/glm-latest",
+    "name": "Z.ai: GLM Latest",
+    "promptUsdPerToken": 1.2e-7,
+    "completionUsdPerToken": 0.000004,
+    "contextLength": 1048576
+  }
+]

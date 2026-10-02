@@ -3,6 +3,7 @@
 useNodeVersion: 24.21.0
 
 ignoredBuiltDependencies:
+  - esbuild
   - lefthook
   - sharp
   - unrs-resolver
