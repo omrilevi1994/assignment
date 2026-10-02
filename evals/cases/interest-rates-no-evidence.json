@@ -1,0 +1,19 @@
+{
+  "id": "interest-rates-no-evidence",
+  "tags": [
+    "core",
+    "insufficient-evidence"
+  ],
+  "question": "Will interest rates fall next quarter?",
+  "expect": {
+    "evidence_level": [
+      "none"
+    ]
+  },
+  "judge": [
+    "Says plainly that the events contain no evidence about interest rates.",
+    "Gives no interest-rate forecast, figure or direction from general knowledge.",
+    "Fills missing_info with what would be needed to answer, such as central bank guidance or market rate expectations.",
+    "Does not present the central bank settlement event (evt_005) or any other finance event as evidence about rates."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "labor-availability-thin-evidence",
+  "tags": [
+    "core",
+    "insufficient-evidence"
+  ],
+  "question": "What do the events tell us about the availability of the skilled technical workforce we depend on?",
+  "expect": {
+    "evidence_level": [
+      "partial",
+      "none"
+    ]
+  },
+  "judge": [
+    "Says that no event addresses the skilled technical workforce Asteron depends on directly.",
+    "If it cites the care-worker shortage (evt_019) or the pension funding event (evt_025), presents them only as indirect demographic signals.",
+    "If it cites the hiring survey (evt_003), notes that it concerns customer support, finance operations and routine legal review, not technical staff.",
+    "Does not fill the gap with labor-market figures from general knowledge."
+  ]
+}

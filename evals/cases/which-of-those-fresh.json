@@ -1,0 +1,20 @@
+{
+  "id": "which-of-those-fresh",
+  "tags": [
+    "adversarial",
+    "follow-up"
+  ],
+  "question": "Which of those could affect our cost base?",
+  "history": [],
+  "expect": {
+    "evidence_level": [
+      "none",
+      "partial"
+    ]
+  },
+  "judge": [
+    "Asks what 'those' refers to, or says there is no earlier list in this conversation.",
+    "Does not invent or assume a previous list of events.",
+    "If it offers candidate events, presents them as suggestions for the user to confirm, not as the list the user meant."
+  ]
+}

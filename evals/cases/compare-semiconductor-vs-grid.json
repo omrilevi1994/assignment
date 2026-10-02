@@ -1,0 +1,27 @@
+{
+  "id": "compare-semiconductor-vs-grid",
+  "tags": [
+    "core"
+  ],
+  "question": "Compare the semiconductor export-control event with the electricity-grid constraints.",
+  "expect": {
+    "must_cite": [
+      "evt_006"
+    ],
+    "must_cite_any": [
+      "evt_004",
+      "evt_021"
+    ],
+    "evidence_level": [
+      "strong",
+      "partial"
+    ],
+    "facts_required": true
+  },
+  "judge": [
+    "Compares the two on at least two dimensions, such as time horizon, which plants or dependencies are affected, and possible mitigation.",
+    "Notes that the licensing applies to chemicals used in chip manufacturing, so it reaches Asteron through its semiconductor supply rather than directly.",
+    "Keeps each event's geography as reported: the rationing was in three Southern European countries, and no event names Asteron's plants in Poland or Malaysia.",
+    "Presents the comparison of impact on Asteron as analysis, with each event's details cited."
+  ]
+}

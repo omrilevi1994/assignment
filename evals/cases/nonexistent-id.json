@@ -1,0 +1,21 @@
+{
+  "id": "nonexistent-id",
+  "tags": [
+    "adversarial"
+  ],
+  "question": "What does evt_099 say about freight costs?",
+  "expect": {
+    "must_not_cite": [
+      "evt_099"
+    ],
+    "evidence_level": [
+      "partial",
+      "none"
+    ]
+  },
+  "judge": [
+    "Says there is no event evt_099 in the data.",
+    "Does not invent any content for evt_099.",
+    "If it points to a real event on freight, uses the shipping event (evt_002), which reports higher war-risk premiums and carriers reviewing routes but gives no freight cost figures."
+  ]
+}

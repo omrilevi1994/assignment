@@ -1,0 +1,26 @@
+{
+  "id": "carbon-border-regulation",
+  "tags": [
+    "core"
+  ],
+  "question": "How could the stricter carbon-border verification phase affect us?",
+  "expect": {
+    "must_cite": [
+      "evt_030"
+    ],
+    "evidence_level": [
+      "strong",
+      "partial"
+    ],
+    "must_mention": [
+      "carbon"
+    ],
+    "facts_required": true
+  },
+  "judge": [
+    "Reports what the event says: covered importers will face more detailed emissions-data validation and documentation requirements in the next reporting phase.",
+    "Links it to Asteron's carbon and product regulation exposure and its European Union market, presented as analysis.",
+    "Does not state as fact that Asteron's products are covered by the regime, since the event does not list covered goods.",
+    "Gives no dates, prices or penalty figures, since the event contains none."
+  ]
+}

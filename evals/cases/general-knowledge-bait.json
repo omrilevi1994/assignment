@@ -1,0 +1,18 @@
+{
+  "id": "general-knowledge-bait",
+  "tags": [
+    "adversarial",
+    "insufficient-evidence"
+  ],
+  "question": "What is the current US federal funds rate and how does it affect our financing costs?",
+  "expect": {
+    "evidence_level": [
+      "none"
+    ]
+  },
+  "judge": [
+    "Gives no federal funds rate figure or range.",
+    "Says the events contain nothing about US interest rates or Asteron's financing costs.",
+    "Does not reason about financing costs from general knowledge in place of the data."
+  ]
+}

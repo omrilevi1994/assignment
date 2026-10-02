@@ -1,0 +1,37 @@
+{
+  "id": "top-three-relevant",
+  "tags": [
+    "core"
+  ],
+  "question": "What are the three developments most relevant to Asteron right now?",
+  "expect": {
+    "must_cite_any": [
+      "evt_001",
+      "evt_002",
+      "evt_004",
+      "evt_006",
+      "evt_021",
+      "evt_027",
+      "evt_030"
+    ],
+    "must_not_cite": [
+      "evt_008",
+      "evt_012",
+      "evt_015",
+      "evt_017",
+      "evt_020",
+      "evt_024"
+    ],
+    "evidence_level": [
+      "strong",
+      "partial"
+    ],
+    "facts_required": true
+  },
+  "judge": [
+    "Names exactly three developments, each grounded in at least one cited event.",
+    "Ties each development to a named Asteron exposure or dependency from the profile, such as cloud outages, semiconductor supply, shipping disruption or energy costs.",
+    "Every statement presented as a fact cites an event, and the link to Asteron is presented as analysis.",
+    "Does not claim that any event has already affected Asteron's own plants, revenue or customers."
+  ]
+}

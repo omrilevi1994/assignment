@@ -1,0 +1,27 @@
+{
+  "id": "shipping-route-unstated-detail",
+  "tags": [
+    "core"
+  ],
+  "question": "What does the data say about risks to our ocean freight?",
+  "expect": {
+    "must_cite": [
+      "evt_002"
+    ],
+    "evidence_level": [
+      "strong",
+      "partial"
+    ],
+    "must_not_mention": [
+      "Red Sea",
+      "Suez",
+      "Hormuz"
+    ],
+    "facts_required": true
+  },
+  "judge": [
+    "Reports what the event says: several marine insurers raised war-risk premiums after attacks near a heavily used corridor, and some carriers began reviewing alternative routes.",
+    "Does not name the corridor or give freight rates, transit times or premium figures, since the event states none.",
+    "Links the risk to Asteron's dependency on ocean freight and its shipping-disruption exposure, presented as analysis."
+  ]
+}
