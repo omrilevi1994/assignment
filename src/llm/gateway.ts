@@ -34,6 +34,7 @@ export type StageResult<T> = {
   object: T;
   usage: TokenUsage;
   costUsd: number;
+  billedCostUsd?: number;
   latencyMs: number;
   raw: string;
   model: string;
@@ -41,7 +42,7 @@ export type StageResult<T> = {
 };
 
 /** What one call produced, live or replayed, before it is priced. */
-type Answer<T> = { object: T; usage: TokenUsage; raw: string };
+type Answer<T> = { object: T; usage: TokenUsage; raw: string; latencyMs?: number; billedCostUsd?: number };
 
 const MODES: readonly string[] = ["live", "record", "replay"];
 const DEFAULT_TIMEOUT_MS = 60_000;
@@ -63,7 +64,14 @@ function wait(ms: number): Promise<void> {
 function openRouterModel(modelId: string, fetchImpl: typeof fetch | undefined): LanguageModel {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) throw new GatewayError("provider_error", "OPENROUTER_API_KEY is not set; live and record modes need it.");
-  return createOpenRouter({ apiKey, fetch: fetchImpl, compatibility: "strict" }).chat(modelId);
+  return createOpenRouter({ apiKey, fetch: fetchImpl, compatibility: "strict" }).chat(modelId, { usage: { include: true } });
+}
+
+/** Reads provider-reported billing separately from the committed price estimate. */
+function billedCost(value: unknown): number | undefined {
+  const usage = value as { cost?: unknown } | undefined;
+  const cost = usage?.cost;
+  return typeof cost === "number" && Number.isFinite(cost) && cost >= 0 ? cost : undefined;
 }
 
 /** One attempt: a structured-output call with its own timeout and no SDK-level retries. */
@@ -77,7 +85,8 @@ async function callModel<T>(req: StageRequest<T>, model: LanguageModel): Promise
     abortSignal: AbortSignal.timeout(req.timeoutMs ?? DEFAULT_TIMEOUT_MS),
   });
   const usage = { inputTokens: result.usage.inputTokens ?? 0, outputTokens: result.usage.outputTokens ?? 0 };
-  return { object: result.output, usage, raw: result.text };
+  const billedCostUsd = billedCost(result.providerMetadata?.openrouter?.usage);
+  return { object: result.output, usage, raw: result.text, billedCostUsd };
 }
 
 /** Runs an attempt and, after a retryable failure, waits once and runs it again. Failures leave as GatewayError. */
@@ -112,7 +121,7 @@ function fromFixture<T>(req: StageRequest<T>, dir: string, key: string): Answer<
       cause: parsed.error,
     });
   }
-  return { object: parsed.data, usage: record.usage, raw: record.raw };
+  return { object: parsed.data, usage: record.usage, raw: record.raw, latencyMs: record.latencyMs ?? 0, billedCostUsd: record.billedCostUsd };
 }
 
 /** The fixture written in record mode: the prompt and the answer side by side. */
@@ -123,7 +132,7 @@ function toRecord<T>(req: StageRequest<T>, answer: Answer<T>): FixtureRecord {
 
 /** Prices an answer and stamps it with latency, model and source. */
 function toResult<T>(answer: Answer<T>, model: ModelInfo, startedAt: number, source: StageResult<T>["source"]): StageResult<T> {
-  const latencyMs = Math.round(performance.now() - startedAt);
+  const latencyMs = answer.latencyMs ?? Math.round(performance.now() - startedAt);
   return { ...answer, costUsd: costFromUsage(model, answer.usage), latencyMs, model: model.id, source };
 }
 
@@ -141,6 +150,7 @@ export async function runStage<T>(req: StageRequest<T>, deps: GatewayDeps = {}):
   if (mode === "replay") return toResult(fromFixture(req, dir, key), model, startedAt, "replay");
   const languageModel = deps.languageModel ?? openRouterModel(req.model, deps.fetchImpl);
   const answer = await withRetry(() => callModel(req, languageModel), deps.sleep ?? wait);
-  if (mode === "record") writeFixture(dir, key, toRecord(req, answer));
-  return toResult(answer, model, startedAt, "live");
+  const result = toResult(answer, model, startedAt, "live");
+  if (mode === "record") writeFixture(dir, key, toRecord(req, { ...answer, latencyMs: result.latencyMs }));
+  return result;
 }

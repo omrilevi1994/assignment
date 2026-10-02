@@ -3,7 +3,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 
 /** The stages that have a versioned system prompt. */
-export type PromptName = "select" | "answer";
+export type PromptName = "select" | "answer" | "single" | "judge";
 
 /** A system prompt as loaded from `prompts/<name>.v<N>.md`. */
 export type Prompt = { name: PromptName; version: number; text: string; hash: string };

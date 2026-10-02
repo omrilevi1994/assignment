@@ -14,5 +14,7 @@
     "outputTokens": 50
   },
   "raw": "{\n  \"standalone_question\": \"Will interest rates fall next quarter?\",\n  \"answerable\": false,\n  \"selected\": [],\n  \"gap\": \"The events do not provide information about future interest rate movements.\"\n}",
-  "recordedAt": "2026-10-02T21:47:09.502Z"
+  "billedCostUsd": 0.0007718,
+  "latencyMs": 934,
+  "recordedAt": "2026-10-02T23:00:12.719Z"
 }

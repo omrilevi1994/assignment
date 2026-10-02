@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-10-02T22:33:14.500Z",
+  "mode": "replay",
+  "measurements": {
+    "cost": "Token usage priced with the committed model snapshot; includes judge calls.",
+    "latency": "Recorded strategy stage latency; judge latency is separate in its record. Legacy recordings without latency report zero.",
+    "billing": "uniqueRecordedCostUsd is historical cost for distinct recordings. newCallCostUsd is newly completed provider-call billing (or a price estimate when unavailable), zero in replay. Timed-out attempts without a response are not included."
+  },
+  "summaries": [
+    {
+      "run": "default",
+      "strategy": "pipeline",
+      "selectModel": "google/gemini-2.5-flash",
+      "answerModel": "google/gemini-2.5-pro",
+      "cases": 1,
+      "passRate": 1,
+      "judgeMean": null,
+      "costUsd": 0.0007718,
+      "meanLatencyMs": 0
+    }
+  ],
+  "results": [
+    {
+      "status": "ok",
+      "answer": {
+        "summary": "The events contain no evidence for this question, so there is nothing grounded to report.",
+        "facts": [],
+        "analysis": [],
+        "evidence_level": "none",
+        "missing_info": "The events do not provide information about future interest rate movements.",
+        "follow_ups": [
+          "Which three events matter most to Asteron right now?",
+          "Which events could affect Asteron's supply chain or energy costs?"
+        ]
+      },
+      "standaloneQuestion": "Will interest rates fall next quarter?",
+      "stages": [
+        {
+          "stage": "select",
+          "model": "google/gemini-2.5-flash",
+          "inputTokens": 2156,
+          "outputTokens": 50,
+          "costUsd": 0.0007718,
+          "latencyMs": 0,
+          "promptHash": "select v1 \u00b7 0b7264aef778",
+          "source": "replay"
+        }
+      ],
+      "verifyReport": {
+        "removed_citations": [],
+        "demoted_claims": [],
+        "evidence_level_changed": null
+      },
+      "error": null,
+      "judge": null,
+      "judgeError": null,
+      "run": "default",
+      "strategy": "pipeline",
+      "selectModel": "google/gemini-2.5-flash",
+      "answerModel": "google/gemini-2.5-pro",
+      "caseId": "interest-rates-no-evidence",
+      "checks": [
+        {
+          "name": "evidence_level",
+          "pass": true,
+          "detail": "Evidence level \"none\" is allowed."
+        }
+      ],
+      "costUsd": 0.0007718,
+      "latencyMs": 0
+    }
+  ],
+  "uniqueRecordedCostUsd": 0.0007718,
+  "newCallCostUsd": 0
+}

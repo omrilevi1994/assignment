@@ -1,0 +1,13 @@
+{
+  "matrixCompletedCallBilledUsd": 0.9446613999999999,
+  "schemaProbeBilledUsd": 0.0012172475,
+  "totalCompletedCallBilledUsd": 0.9458786474999998,
+  "replayNewCallCostUsd": 0,
+  "authorizedBudgetUsd": 6,
+  "billingScope": "Provider-reported costs for completed responses. Timed-out nonstreaming attempts may incur additional billing unavailable in their responses; these totals are not a complete account-debit measurement.",
+  "liveAndReplayTablesIdentical": true,
+  "matrixResults": 52,
+  "providerFailures": 0,
+  "judgeFailures": 0,
+  "deterministicFailedRows": 4
+}

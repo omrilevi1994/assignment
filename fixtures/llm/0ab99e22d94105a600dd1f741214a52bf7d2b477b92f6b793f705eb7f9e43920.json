@@ -9,23 +9,25 @@
     "selected": [
       {
         "event_id": "evt_001",
-        "reason": "This regional cloud outage could increase Asteron's operational costs due to service disruptions or the need for redundant systems."
+        "reason": "A major cloud provider outage could increase Asteron's operational costs due to service disruptions or the need for redundant solutions."
       },
       {
         "event_id": "evt_006",
-        "reason": "New export licensing for semiconductor chemicals could increase the cost or restrict the supply of components essential for Asteron's products or operations."
+        "reason": "New export licensing for semiconductor chemicals could increase the cost or reduce the availability of advanced semiconductors, impacting Asteron's supply chain and cost base."
       },
       {
         "event_id": "evt_004",
-        "reason": "Industrial power rationing could directly increase Asteron's energy costs or disrupt production if its facilities are in affected regions."
+        "reason": "Industrial power rationing directly impacts energy costs and operational continuity, thus affecting Asteron's cost base."
       }
     ],
     "gap": ""
   },
   "usage": {
     "inputTokens": 2294,
-    "outputTokens": 218
+    "outputTokens": 219
   },
-  "raw": "{\n  \"standalone_question\": \"Which of evt_001, evt_006, and evt_004 could affect Asteron's cost base within 12 months?\",\n  \"answerable\": true,\n  \"selected\": [\n    {\n      \"event_id\": \"evt_001\",\n      \"reason\": \"This regional cloud outage could increase Asteron's operational costs due to service disruptions or the need for redundant systems.\"\n    },\n    {\n      \"event_id\": \"evt_006\",\n      \"reason\": \"New export licensing for semiconductor chemicals could increase the cost or restrict the supply of components essential for Asteron's products or operations.\"\n    },\n    {\n      \"event_id\": \"evt_004\",\n      \"reason\": \"Industrial power rationing could directly increase Asteron's energy costs or disrupt production if its facilities are in affected regions.\"\n    }\n  ],\n  \"gap\": \"\"\n}",
-  "recordedAt": "2026-10-02T21:46:37.750Z"
+  "raw": "{\n  \"standalone_question\": \"Which of evt_001, evt_006, and evt_004 could affect Asteron's cost base within 12 months?\",\n  \"answerable\": true,\n  \"selected\": [\n    {\n      \"event_id\": \"evt_001\",\n      \"reason\": \"A major cloud provider outage could increase Asteron's operational costs due to service disruptions or the need for redundant solutions.\"\n    },\n    {\n      \"event_id\": \"evt_006\",\n      \"reason\": \"New export licensing for semiconductor chemicals could increase the cost or reduce the availability of advanced semiconductors, impacting Asteron's supply chain and cost base.\"\n    },\n    {\n      \"event_id\": \"evt_004\",\n      \"reason\": \"Industrial power rationing directly impacts energy costs and operational continuity, thus affecting Asteron's cost base.\"\n    }\n  ],\n  \"gap\": \"\"\n}",
+  "billedCostUsd": 0.0012357,
+  "latencyMs": 2090,
+  "recordedAt": "2026-10-02T22:59:43.567Z"
 }

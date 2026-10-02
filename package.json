@@ -20,6 +20,7 @@
     "typecheck": "tsc --noEmit",
     "test": "pnpm db:up && pnpm db:migrate && vitest run",
     "test:watch": "vitest",
+    "eval": "tsx src/evals/run.ts",
     "eval:import": "tsx scripts/eval-import.ts",
     "verify": "pnpm lint && pnpm typecheck && pnpm test",
     "graph": "mkdir -p docs/architecture && depcruise src --output-type mermaid > docs/architecture/deps.mmd",

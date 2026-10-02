@@ -1,0 +1,33 @@
+{
+  "recordedAt": "2026-10-02T22:59:39.877Z",
+  "results": [
+    {
+      "model": "deepseek/deepseek-chat-v3.1",
+      "status": "ok",
+      "costUsd": 0.0001106,
+      "billedCostUsd": 0.00011048,
+      "latencyMs": 14151
+    },
+    {
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "status": "ok",
+      "costUsd": 0.000032,
+      "billedCostUsd": 0.000032,
+      "latencyMs": 5564
+    },
+    {
+      "model": "x-ai/grok-4.20",
+      "status": "ok",
+      "costUsd": 0.00113125,
+      "billedCostUsd": 0.00099685,
+      "latencyMs": 1766
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "status": "ok",
+      "costUsd": 0.0000779175,
+      "billedCostUsd": 0.0000779175,
+      "latencyMs": 58752
+    }
+  ]
+}
