@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { afterEach, expect, it, vi } from "vitest";
 import { loadCases } from "./case";
 import { judgeAnswer } from "./judge";
@@ -9,15 +9,11 @@ import { runEvaluation } from "./runner";
 import { runStrategy } from "./strategies";
 import type { CaseResult } from "./types";
 
-/** Uses an immutable complete report; running a filtered CLI eval may replace latest.json. */
-function recordedMatrix(expectedCount: number): CaseResult[] {
-  const directory = new URL("../../evals/results/", import.meta.url);
-  const reports = readdirSync(directory).filter((name) => /^\d{4}-.*\.json$/.test(name)).sort().reverse();
-  for (const name of reports) {
-    const report = JSON.parse(readFileSync(new URL(name, directory), "utf8")) as { results: CaseResult[] };
-    if (report.results.length === expectedCount) return report.results;
-  }
-  throw new Error("Record a complete matrix before testing its replay.");
+/** Reads the reviewed baseline directly; local run outputs never choose the expected result. */
+function recordedMatrix(): CaseResult[] {
+  const file = new URL("../../evals/results/baseline.json", import.meta.url);
+  const report = JSON.parse(readFileSync(file, "utf8")) as { results: CaseResult[] };
+  return report.results;
 }
 
 afterEach(() => {
@@ -37,7 +33,8 @@ it("reproduces the complete recorded matrix tables without credentials or networ
     judgeCall: (model, item, result, deps) => judgeAnswer(model, item, result, deps, gateway.call),
   });
   expect(results).toHaveLength(runs.reduce((total, run) => total + run.cases.length, 0));
-  const saved = recordedMatrix(results.length);
+  const saved = recordedMatrix();
+  expect(saved).toHaveLength(results.length);
   expect(results.filter((row) => row.status === "failed" || row.judgeError)).toEqual([]);
   expect(formatTables(results)).toBe(formatTables(saved));
   expect(fetch).not.toHaveBeenCalled();
