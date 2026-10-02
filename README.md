@@ -6,7 +6,7 @@ Work is planned in the [roadmap](https://github.com/omrilevi1994/assignment/issu
 
 ## Run locally
 
-Requirements: Node 22, pnpm 10, Docker.
+Requirements: pnpm 10 and Docker. pnpm downloads the pinned Node 24 on first use.
 
 ```bash
 pnpm install
@@ -22,5 +22,11 @@ pnpm verify      # lint + module boundaries + typecheck + tests (also runs on pr
 pnpm test:watch  # tests in watch mode
 pnpm graph       # module dependency graph -> docs/architecture/deps.mmd
 ```
+
+## Data
+
+The two supplied workbooks are kept unchanged in `data/raw/`. `pnpm data:convert` turns them into the committed files the app reads, `data/events.json` (30 events) and `data/company.json` (the company profile), validating every row against the Zod schemas in `src/domain/`. The app never parses spreadsheets at runtime.
+
+Two rules from the exercise data carry through the whole system: the company profile is context for analysis and never evidence that an event occurred, and the source URLs are placeholders that may not resolve.
 
 Architecture, grounding, trade-offs and scaling notes are added as the implementation lands.
