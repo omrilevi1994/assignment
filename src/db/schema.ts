@@ -73,6 +73,21 @@ export const traces = pgTable(
   ],
 );
 
+export const feedback = pgTable(
+  "feedback",
+  {
+    id: text("id").primaryKey(),
+    turnId: text("turn_id").notNull().references(() => turns.id, { onDelete: "cascade" }),
+    note: text("note").notNull(),
+    createdAt: createdAt(),
+  },
+  (table) => [
+    index("feedback_turn_id_idx").on(table.turnId),
+    check("feedback_note_length_check", sql`char_length(btrim(${table.note})) between 1 and 2000`),
+  ],
+);
+
 export type ConversationRow = typeof conversations.$inferSelect;
 export type TurnRow = typeof turns.$inferSelect;
 export type TraceRow = typeof traces.$inferSelect;
+export type FeedbackRow = typeof feedback.$inferSelect;

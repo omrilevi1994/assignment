@@ -31,13 +31,13 @@ describe("migrations", () => {
     await admin.end();
   });
 
-  it("creates the conversations, turns and traces tables on an empty database", async () => {
+  it("creates conversation, turn, trace and feedback tables on an empty database", async () => {
     await runMigrations(urlFor(database));
 
     const rows = await target`
       select table_name from information_schema.tables
       where table_schema = 'public' order by table_name`;
-    expect(rows.map((row) => row.table_name)).toEqual(["conversations", "traces", "turns"]);
+    expect(rows.map((row) => row.table_name)).toEqual(["conversations", "feedback", "traces", "turns"]);
   });
 
   it("applies each migration once when run again", async () => {
@@ -45,6 +45,6 @@ describe("migrations", () => {
     await runMigrations(urlFor(database));
 
     const [{ applied }] = await target`select count(*)::int as applied from drizzle.__drizzle_migrations`;
-    expect(applied).toBe(1);
+    expect(applied).toBe(2);
   });
 });

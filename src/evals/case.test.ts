@@ -1,4 +1,4 @@
-import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
@@ -115,6 +115,13 @@ describe("loadCases", () => {
   it("returns parsed cases with defaults filled in", () => {
     write("cloud-risk.json", minimal);
     expect(loadCases(dir)[0].expect.must_cite).toEqual([]);
+  });
+
+  it("ignores unreviewed draft cases in the drafts directory", () => {
+    write("cloud-risk.json", minimal);
+    mkdirSync(path.join(dir, "drafts"));
+    writeFileSync(path.join(dir, "drafts", "unreviewed.json"), "invalid draft JSON");
+    expect(loadCases(dir).map((entry) => entry.id)).toEqual(["cloud-risk"]);
   });
 
   it("throws on a duplicate id and names it", () => {
