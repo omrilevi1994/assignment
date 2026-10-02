@@ -14,5 +14,7 @@
     "outputTokens": 67
   },
   "raw": "{\n  \"standalone_question\": \"Which of (no earlier list exists in this conversation) could affect Asteron's cost base?\",\n  \"answerable\": false,\n  \"selected\": [],\n  \"gap\": \"The question refers to an earlier list, but this conversation has no earlier list.\"\n}",
-  "recordedAt": "2026-10-02T21:47:10.300Z"
+  "billedCostUsd": 0.0008149,
+  "latencyMs": 722,
+  "recordedAt": "2026-10-02T23:03:09.028Z"
 }

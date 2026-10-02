@@ -90,6 +90,12 @@ describe("committed eval cases", () => {
     }
   });
 
+  it("gives every adversarial case an active deterministic expectation", () => {
+    for (const evaluationCase of cases.filter((item) => item.tags.includes("adversarial"))) {
+      expect(hasExpectation(evaluationCase), evaluationCase.id).toBe(true);
+    }
+  });
+
   it("gives every case two to four judge criteria", () => {
     for (const c of cases) {
       expect(c.judge.length, c.id).toBeGreaterThanOrEqual(2);

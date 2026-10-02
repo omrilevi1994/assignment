@@ -26,3 +26,7 @@ coverage/
 .vscode/
 *.log
 *.pem
+
+# local eval reports (the reviewed baseline is committed)
+/evals/results/latest.json
+/evals/results/[0-9][0-9][0-9][0-9]-*.json

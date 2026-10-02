@@ -38,6 +38,7 @@ function mockModel(text: string, finishReason: "stop" | "length" = "stop"): Mock
         outputTokens: { total: 200, text: 200, reasoning: undefined },
       },
       warnings: [],
+      providerMetadata: { openrouter: { usage: { cost: 0.0021 } } },
     }),
   });
 }
@@ -198,6 +199,11 @@ describe("runStage in record mode", () => {
     const replayed = await runStage(req, { mode: "replay", fixtureDir: dir, registry, fetchImpl });
     expect(replayed).toMatchObject({ object: recorded.object, usage: recorded.usage, raw: recorded.raw, source: "replay" });
     expect(replayed.costUsd).toBeCloseTo(recorded.costUsd, 12);
+    expect(recorded.billedCostUsd).toBe(0.0021);
+    expect(fixture?.billedCostUsd).toBe(0.0021);
+    expect(replayed.billedCostUsd).toBe(0.0021);
+    expect(fixture?.latencyMs).toBe(recorded.latencyMs);
+    expect(replayed.latencyMs).toBe(recorded.latencyMs);
   });
 });
 

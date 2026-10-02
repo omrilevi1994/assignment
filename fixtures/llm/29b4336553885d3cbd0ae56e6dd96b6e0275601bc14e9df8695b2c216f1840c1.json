@@ -1,0 +1,32 @@
+{
+  "stage": "schema-probe",
+  "model": "meta-llama/llama-4-maverick",
+  "system": "Answer only from the supplied event. Separate facts from analysis. Use the requested schema and no outside knowledge.",
+  "input": "Event evt_001 reports a six-hour regional cloud outage. State this fact with its event citation. There is no company profile. Give no analysis, no follow-ups, evidence_level strong and empty missing_info.",
+  "object": {
+    "summary": "evt_001: six-hour regional cloud outage",
+    "facts": [
+      {
+        "claim": "six-hour regional cloud outage",
+        "sources": [
+          {
+            "type": "event",
+            "id": "evt_001"
+          }
+        ]
+      }
+    ],
+    "analysis": [],
+    "evidence_level": "strong",
+    "missing_info": "",
+    "follow_ups": []
+  },
+  "usage": {
+    "inputTokens": 78,
+    "outputTokens": 97
+  },
+  "raw": "{\n  \"analysis\": [],\n  \"evidence_level\": \"strong\",\n  \"facts\": [\n    {\n      \"claim\": \"six-hour regional cloud outage\",\n      \"sources\": [\n        {\n          \"id\": \"evt_001\"\n        , \"type\": \"event\"}\n      ]\n    }\n  ],\n  \"follow_ups\": [],\n  \"missing_info\": \"\"\n  ,\n  \"summary\": \"evt_001: six-hour regional cloud outage\"\n}",
+  "billedCostUsd": 0.0000779175,
+  "latencyMs": 58752,
+  "recordedAt": "2026-10-02T22:59:39.877Z"
+}

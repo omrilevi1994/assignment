@@ -12,6 +12,8 @@ export type FixtureRecord = FixtureCall & {
   usage: { inputTokens: number; outputTokens: number };
   raw: string;
   recordedAt: string;
+  latencyMs?: number;
+  billedCostUsd?: number;
 };
 
 const FixtureRecordSchema = z.object({
@@ -23,6 +25,8 @@ const FixtureRecordSchema = z.object({
   usage: z.object({ inputTokens: z.number(), outputTokens: z.number() }),
   raw: z.string(),
   recordedAt: z.string(),
+  latencyMs: z.number().int().nonnegative().optional(),
+  billedCostUsd: z.number().nonnegative().optional(),
 });
 
 /** Where fixtures live when nothing else is configured, relative to the repo root. */
