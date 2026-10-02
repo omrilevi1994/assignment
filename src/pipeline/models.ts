@@ -1,10 +1,11 @@
 /**
- * Model ids per stage. Selection is a cheap, fast, non-reasoning model; the
- * answer uses a strong model. Both are OpenRouter ids from the committed price
- * snapshot, and the answer model must accept the `oneOf` that the discriminated
- * source union becomes in JSON Schema (OpenAI strict structured output rejects it).
+ * Model ids per stage. Selection uses a cheap, fast model that still follows
+ * the reference-resolution rules; the answer uses a strong model. Both are
+ * OpenRouter ids from the committed price snapshot, and the answer model must
+ * accept the `oneOf` that the discriminated source union becomes in JSON Schema
+ * (OpenAI strict structured output rejects it).
  */
-export const DEFAULT_SELECT_MODEL = "openai/gpt-4o-mini";
+export const DEFAULT_SELECT_MODEL = "google/gemini-2.5-flash";
 export const DEFAULT_ANSWER_MODEL = "google/gemini-2.5-pro";
 
 /** Per-stage timeouts. The answer model reasons before it writes, so it gets longer. */
