@@ -7,6 +7,7 @@
  *   src/llm       the only module that talks to a model      -> domain
  *   src/pipeline  Select -> Answer -> Verify orchestration    -> domain, data, llm
  *   src/db        Drizzle schema and repositories            -> domain
+ *   src/evals     eval cases, deterministic checks           -> domain, data
  *   src/app       Next.js routes and pages                   -> everything above
  *   src/components React UI                                  -> domain types only
  */
@@ -30,6 +31,15 @@ module.exports = {
       severity: "error",
       from: { path: "^src/pipeline" },
       to: { path: "^src/(app|components|db)|^node_modules/(next|react)/" },
+    },
+    {
+      name: "evals-have-no-ui-or-db",
+      comment:
+        "Eval cases and checks run outside the app, so they never reach the UI, the database or the framework. " +
+        "The package pattern is not anchored because pnpm resolves packages under node_modules/.pnpm/.",
+      severity: "error",
+      from: { path: "^src/evals" },
+      to: { path: "^src/(app|components|db)|(^|/)node_modules/(next|react|ai)/" },
     },
     {
       name: "only-gateway-talks-to-models",
