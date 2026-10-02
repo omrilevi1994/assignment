@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
-import { desc, eq, max } from "drizzle-orm";
+import { asc, desc, eq, max } from "drizzle-orm";
+import type { Trace } from "@/domain/trace";
 import { getDb, type Database } from "./client";
 import { conversations, traces, turns, type ConversationRow, type TraceRow, type TurnRow } from "./schema";
 import { TraceInputSchema, TurnRoleSchema, type TraceInput, type TurnRole } from "./types";
@@ -78,4 +79,68 @@ export async function saveTrace(input: TraceInput, db: Database = getDb()): Prom
     .values({ id: randomUUID(), ...trace })
     .returning();
   return row;
+}
+
+/** A conversation as listed in the sidebar. */
+export type ConversationSummary = { id: string; title: string | null; createdAt: Date };
+
+/** One stored turn with the trace of the pipeline run it belongs to, or null when it has none. */
+export type ConversationTurn = {
+  id: string;
+  role: TurnRole;
+  position: number;
+  content: unknown;
+  createdAt: Date;
+  trace: Trace | null;
+};
+
+/** A conversation with all of its turns, oldest first. */
+export type ConversationDetail = { id: string; title: string | null; turns: ConversationTurn[] };
+
+/** The conversation with this id, or null when there is none. */
+export async function findConversation(conversationId: string, db: Database = getDb()): Promise<ConversationRow | null> {
+  const [row] = await db.select().from(conversations).where(eq(conversations.id, conversationId));
+  return row ?? null;
+}
+
+/** The most recent conversations, newest first. */
+export async function listConversations(limit = 50, db: Database = getDb()): Promise<ConversationSummary[]> {
+  return db
+    .select({ id: conversations.id, title: conversations.title, createdAt: conversations.createdAt })
+    .from(conversations)
+    .orderBy(desc(conversations.createdAt))
+    .limit(limit);
+}
+
+/** A stored trace without its row bookkeeping (id, turn id, insert time). */
+function toTrace(row: TraceRow): Trace {
+  const { status, stages, verifyReport, totalCostUsd, totalLatencyMs, error } = row;
+  return { status, stages, verifyReport, totalCostUsd, totalLatencyMs, error };
+}
+
+/**
+ * The turns of a conversation in position order, each joined with its trace.
+ * A turn has at most one trace; should there be more, the latest wins.
+ */
+async function turnsWithTraces(conversationId: string, db: Database): Promise<ConversationTurn[]> {
+  const rows = await db
+    .select({ turn: turns, trace: traces })
+    .from(turns)
+    .leftJoin(traces, eq(traces.turnId, turns.id))
+    .where(eq(turns.conversationId, conversationId))
+    .orderBy(asc(turns.position), asc(traces.createdAt));
+  const byId = new Map<string, ConversationTurn>();
+  for (const { turn, trace } of rows) {
+    const { id, role, position, content, createdAt } = turn;
+    byId.set(id, { id, role, position, content, createdAt, trace: trace ? toTrace(trace) : null });
+  }
+  return [...byId.values()];
+}
+
+/** A conversation with every turn and trace, ready to render; null when the id is unknown. */
+export async function loadConversation(conversationId: string, db: Database = getDb()): Promise<ConversationDetail | null> {
+  const conversation = await findConversation(conversationId, db);
+  if (!conversation) return null;
+  const { id, title } = conversation;
+  return { id, title, turns: await turnsWithTraces(conversationId, db) };
 }

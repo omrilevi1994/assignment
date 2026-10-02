@@ -3,7 +3,15 @@ import { ZodError } from "zod";
 import { afterAll, afterEach, describe, expect, it } from "vitest";
 import type { StageRecord } from "@/domain/trace";
 import { createDb } from "./client";
-import { appendTurn, createConversation, loadHistory, saveTrace } from "./repository";
+import {
+  appendTurn,
+  createConversation,
+  findConversation,
+  listConversations,
+  loadConversation,
+  loadHistory,
+  saveTrace,
+} from "./repository";
 import { conversations, traces, turns } from "./schema";
 import type { TurnRole } from "./types";
 import { databaseUrl } from "./url";
@@ -174,5 +182,91 @@ describe("saveTrace", () => {
 
     await expect(saveTrace(invalid, db)).rejects.toBeInstanceOf(ZodError);
     expect(await db.select().from(traces).where(eq(traces.turnId, question.id))).toEqual([]);
+  });
+});
+
+describe("findConversation", () => {
+  it("returns the stored conversation", async () => {
+    const conversation = await newConversation("Energy exposure");
+
+    expect(await findConversation(conversation.id, db)).toEqual(conversation);
+  });
+
+  it("returns null for an unknown id", async () => {
+    expect(await findConversation("00000000-0000-4000-8000-000000000000", db)).toBeNull();
+  });
+});
+
+describe("listConversations", () => {
+  it("lists conversations newest first", async () => {
+    const first = await newConversation("first");
+    const second = await newConversation("second");
+    const third = await newConversation();
+    const ours = new Set([first.id, second.id, third.id]);
+
+    const listed = (await listConversations(50, db)).filter((row) => ours.has(row.id));
+
+    expect(listed).toEqual([
+      { id: third.id, title: null, createdAt: third.createdAt },
+      { id: second.id, title: "second", createdAt: second.createdAt },
+      { id: first.id, title: "first", createdAt: first.createdAt },
+    ]);
+  });
+
+  it("returns at most the given number of conversations", async () => {
+    await newConversation("a");
+    await newConversation("b");
+
+    expect(await listConversations(1, db)).toHaveLength(1);
+  });
+});
+
+describe("loadConversation", () => {
+  const failedTrace = {
+    status: "failed" as const,
+    stages: [],
+    verifyReport: null,
+    totalCostUsd: 0,
+    totalLatencyMs: 900,
+    error: "select stage failed (timeout)",
+  };
+  const okTrace = {
+    status: "ok" as const,
+    stages: [stage],
+    verifyReport: { removed_citations: [], demoted_claims: [], evidence_level_changed: null },
+    totalCostUsd: 0.0006,
+    totalLatencyMs: 640,
+    error: null,
+  };
+
+  it("returns the turns in position order, each with its trace or null", async () => {
+    const { id } = await newConversation("Cloud risk");
+    const failedQuestion = await append(id, "user", 0);
+    await saveTrace({ ...failedTrace, turnId: failedQuestion.id }, db);
+    const question = await append(id, "user", 1);
+    const answer = await append(id, "assistant", 2);
+    await saveTrace({ ...okTrace, turnId: answer.id }, db);
+
+    const loaded = await loadConversation(id, db);
+
+    expect(loaded).toEqual({
+      id,
+      title: "Cloud risk",
+      turns: [
+        { id: failedQuestion.id, role: "user", position: 0, content: { text: "turn 0" }, createdAt: expect.any(Date), trace: failedTrace },
+        { id: question.id, role: "user", position: 1, content: { text: "turn 1" }, createdAt: expect.any(Date), trace: null },
+        { id: answer.id, role: "assistant", position: 2, content: { text: "turn 2" }, createdAt: expect.any(Date), trace: okTrace },
+      ],
+    });
+  });
+
+  it("returns a conversation without turns with an empty list", async () => {
+    const { id } = await newConversation();
+
+    expect(await loadConversation(id, db)).toEqual({ id, title: null, turns: [] });
+  });
+
+  it("returns null for an unknown id", async () => {
+    expect(await loadConversation("00000000-0000-4000-8000-000000000000", db)).toBeNull();
   });
 });
