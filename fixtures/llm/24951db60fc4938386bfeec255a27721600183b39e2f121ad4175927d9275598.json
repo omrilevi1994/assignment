@@ -1,0 +1,15 @@
+{
+  "stage": "smoke",
+  "model": "openai/gpt-4o-mini",
+  "system": "You answer questions with a JSON object whose only field is answer.",
+  "input": "What is the capital of France? Answer with the city name only.",
+  "object": {
+    "answer": "Paris"
+  },
+  "usage": {
+    "inputTokens": 62,
+    "outputTokens": 5
+  },
+  "raw": "{\"answer\":\"Paris\"}",
+  "recordedAt": "2026-10-02T21:09:51.180Z"
+}
