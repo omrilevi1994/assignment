@@ -37,5 +37,15 @@ export default defineConfig([
     files: ["**/*.test.{ts,tsx}", "**/*.config.{ts,mjs,cjs}", ".dependency-cruiser.cjs"],
     rules: { "max-lines-per-function": "off", "jsdoc/require-jsdoc": "off" },
   },
+  {
+    // Vendored from shadcn/ui and updated by its CLI, so they keep upstream's shape.
+    files: ["src/components/ui/**"],
+    rules: {
+      "max-lines-per-function": "off",
+      "max-depth": "off",
+      complexity: "off",
+      "jsdoc/require-jsdoc": "off",
+    },
+  },
   globalIgnores([".next/**", "out/**", "build/**", "coverage/**", "docs/**", "graphify-out/**", "next-env.d.ts"]),
 ]);
