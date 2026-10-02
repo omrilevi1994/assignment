@@ -1,0 +1,5 @@
+# Local gate instead of CI: lint, boundaries, typecheck and tests run before every push.
+pre-push:
+  commands:
+    verify:
+      run: pnpm verify
